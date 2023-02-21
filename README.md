@@ -2,14 +2,16 @@
 Manajemen Basis Data Reservasi Hotel
 
 1.	Database reservasi_hotel
+```sql
 CREATE DATABASE reservasi_hotel
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
+```
 2.	Tabel Guest
-
+```sql
 CREATE TABLE public."Guest"
 (
     "Guest ID" character varying(10) NOT NULL,
@@ -24,8 +26,9 @@ CREATE TABLE public."Guest"
 
 ALTER TABLE IF EXISTS public."Guest"
     OWNER to postgres;
-    
+```
 3.	Reservation Agent
+```sql
 CREATE TABLE public."Reservasi_Agent"
 (
     "Reservation Agent ID" character varying(10) NOT NULL,
@@ -40,8 +43,9 @@ CREATE TABLE public."Reservasi_Agent"
 
 ALTER TABLE IF EXISTS public."Reservasi_Agent"
     OWNER to postgres;
-    
+```
 4.	Buat Tabel Hotel
+```sql
 CREATE TABLE public."Hotel"
 (
     "Hotel ID" character varying(10) NOT NULL,
@@ -53,8 +57,9 @@ CREATE TABLE public."Hotel"
 
 ALTER TABLE IF EXISTS public."Hotel"
     OWNER to postgres;
-    
+```    
 5.	Tabel Room
+```sql
 CREATE TABLE public."Room"
 (
     "Room ID" character varying(10) NOT NULL,
@@ -73,8 +78,9 @@ CREATE TABLE public."Room"
 
 ALTER TABLE IF EXISTS public."Room"
     OWNER to postgres;
-    
+```    
 6.	Tabel Booking Status
+```sql
 CREATE TABLE public."Booking Status"
 (
     "Booking Status ID" character varying(10) NOT NULL,
@@ -85,8 +91,9 @@ CREATE TABLE public."Booking Status"
 
 ALTER TABLE IF EXISTS public."Booking Status"
     OWNER to postgres;
-    
+```    
 7.	Tabel Booking
+```sql
 CREATE TABLE public."Booking"
 (
     "Booking ID" character varying(10) NOT NULL,
@@ -119,8 +126,9 @@ CREATE TABLE public."Booking"
         ON DELETE NO ACTION
         NOT VALID
 );
-
+```
 8.	Tabel Room Booked
+```sql
 CREATE TABLE public."Room Booked"
 (
     "Room Booked ID" character varying(10) NOT NULL,
@@ -142,4 +150,4 @@ CREATE TABLE public."Room Booked"
 
 ALTER TABLE IF EXISTS public."Room Booked"
     OWNER to postgres;
-
+```
