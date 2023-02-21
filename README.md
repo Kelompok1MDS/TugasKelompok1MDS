@@ -3,7 +3,7 @@ Manajemen Basis Data Reservasi Hotel
 
 1.	Database reservasi_hotel
 ```sql
-CREATE DATABASE reservasi_hotel
+CREATE DATABASE Reservasi_Hotel
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -14,14 +14,14 @@ CREATE DATABASE reservasi_hotel
 ```sql
 CREATE TABLE public."Guest"
 (
-    "Guest ID" character varying(10) NOT NULL,
-    "First Name" character varying(15) NOT NULL,
-    "Last Name" character varying(15),
+    "GuestID" character varying(10) NOT NULL,
+    "FirstName" character varying(15) NOT NULL,
+    "LastName" character varying(15),
     "Address" character varying(50) NOT NULL,
     "Gender" character(9) NOT NULL,
-    "Phone number" character varying(13) NOT NULL,
+    "PhoneNumber" character varying(13) NOT NULL,
     "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("Guest ID")
+    PRIMARY KEY ("GuestID")
 );
 
 ALTER TABLE IF EXISTS public."Guest"
@@ -29,30 +29,30 @@ ALTER TABLE IF EXISTS public."Guest"
 ```
 3.	Reservation Agent
 ```sql
-CREATE TABLE public."Reservasi_Agent"
+CREATE TABLE public."ReservasiAgent"
 (
-    "Reservation Agent ID" character varying(10) NOT NULL,
-    "First Name" character varying(15) NOT NULL,
-    "Last Name" character varying(15),
+    "ReservationAgentID" character varying(10) NOT NULL,
+    "FirstName" character varying(15) NOT NULL,
+    "LastName" character varying(15),
     "Address" character varying(50) NOT NULL,
     "Gender" character(9) NOT NULL,
-    "Phone Number" character varying(13) NOT NULL,
+    "PhoneNumber" character varying(13) NOT NULL,
     "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("Reservation Agent ID")
+    PRIMARY KEY ("ReservationAgentID")
 );
 
-ALTER TABLE IF EXISTS public."Reservasi_Agent"
+ALTER TABLE IF EXISTS public."ReservasiAgent"
     OWNER to postgres;
 ```
 4.	Buat Tabel Hotel
 ```sql
 CREATE TABLE public."Hotel"
 (
-    "Hotel ID" character varying(10) NOT NULL,
-    "Hotel Name" character(50) NOT NULL,
+    "HotelID" character varying(10) NOT NULL,
+    "HotelName" character(50) NOT NULL,
     "Address" character varying(50) NOT NULL,
     "Price" integer NOT NULL,
-    PRIMARY KEY ("Hotel ID")
+    PRIMARY KEY ("HotelID")
 );
 
 ALTER TABLE IF EXISTS public."Hotel"
@@ -62,15 +62,15 @@ ALTER TABLE IF EXISTS public."Hotel"
 ```sql
 CREATE TABLE public."Room"
 (
-    "Room ID" character varying(10) NOT NULL,
-    "Hotel ID" character varying(10) NOT NULL,
+    "RoomID" character varying(10) NOT NULL,
+    "HotelID" character varying(10) NOT NULL,
     "Status" character(50) NOT NULL,
     "Number" integer NOT NULL,
     "Type" character varying(25) NOT NULL,
     "Floor" character varying(10) NOT NULL,
-    PRIMARY KEY ("Room ID"),
-    CONSTRAINT "Hotel ID_fkey" FOREIGN KEY ("Hotel ID")
-        REFERENCES public."Hotel" ("Hotel ID") MATCH SIMPLE
+    PRIMARY KEY ("RoomID"),
+    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
+        REFERENCES public."Hotel" ("HotelID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -81,47 +81,47 @@ ALTER TABLE IF EXISTS public."Room"
 ```    
 6.	Tabel Booking Status
 ```sql
-CREATE TABLE public."Booking Status"
+CREATE TABLE public."BookingStatus"
 (
-    "Booking Status ID" character varying(10) NOT NULL,
+    "BookingStatusID" character varying(10) NOT NULL,
     "Status" character varying(50) NOT NULL,
     "Description" character varying(100) NOT NULL,
-    PRIMARY KEY ("Booking Status ID")
+    PRIMARY KEY ("BookingStatusID")
 );
 
-ALTER TABLE IF EXISTS public."Booking Status"
+ALTER TABLE IF EXISTS public."BookingStatus"
     OWNER to postgres;
 ```    
 7.	Tabel Booking
 ```sql
 CREATE TABLE public."Booking"
 (
-    "Booking ID" character varying(10) NOT NULL,
-    "Reservation Agent ID" character varying(10) NOT NULL,
-    "Guest ID" character varying(10) NOT NULL,
-    "Hotel ID" character varying(10) NOT NULL,
-	"Booking Status ID" character varying(10) NOT NULL,
-    "Start Date" date NOT NULL,
-    "End Date" date NOT NULL,
-    "Room Count" integer NOT NULL,
-    PRIMARY KEY ("Booking ID"),
-    CONSTRAINT "Reservation Agent ID_fkey" FOREIGN KEY ("Reservation Agent ID")
-        REFERENCES public."Reservasi_Agent" ("Reservation Agent ID") MATCH SIMPLE
+    "BookingID" character varying(10) NOT NULL,
+    "ReservationAgentID" character varying(10) NOT NULL,
+    "GuestID" character varying(10) NOT NULL,
+    "HotelID" character varying(10) NOT NULL,
+	"BookingStatusID" character varying(10) NOT NULL,
+    "StartDate" date NOT NULL,
+    "EndDate" date NOT NULL,
+    "RoomCount" integer NOT NULL,
+    PRIMARY KEY ("BookingID"),
+    CONSTRAINT "ReservationAgentID_fkey" FOREIGN KEY ("ReservationAgentID")
+        REFERENCES public."ReservasiAgent" ("ReservationAgentID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "Guest ID_fkey" FOREIGN KEY ("Guest ID")
-        REFERENCES public."Guest" ("Guest ID") MATCH SIMPLE
+    CONSTRAINT "GuestID_fkey" FOREIGN KEY ("GuestID")
+        REFERENCES public."Guest" ("GuestID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "Hotel ID_fkey" FOREIGN KEY ("Hotel ID")
-        REFERENCES public."Hotel" ("Hotel ID") MATCH SIMPLE
+    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
+        REFERENCES public."Hotel" ("HotelID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-	 CONSTRAINT "Booking Status ID_fkey" FOREIGN KEY ("Booking Status ID")
-        REFERENCES public."Booking Status" ("Booking Status ID") MATCH SIMPLE
+	 CONSTRAINT "BookingStatusID_fkey" FOREIGN KEY ("BookingStatusID")
+        REFERENCES public."BookingStatus" ("BookingStatusID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -129,25 +129,25 @@ CREATE TABLE public."Booking"
 ```
 8.	Tabel Room Booked
 ```sql
-CREATE TABLE public."Room Booked"
+CREATE TABLE public."RoomBooked"
 (
-    "Room Booked ID" character varying(10) NOT NULL,
-	"Room ID" character varying(10) NOT NULL,
-    "Booking ID" character varying(10) NOT NULL,
+    "RoomBookedID" character varying(10) NOT NULL,
+	"RoomID" character varying(10) NOT NULL,
+    "BookingID" character varying(10) NOT NULL,
     "Rate" character varying(10) NOT NULL,
-    PRIMARY KEY ("Room Booked ID"),
-    CONSTRAINT "Room ID" FOREIGN KEY ("Room ID")
-        REFERENCES public."Room" ("Room ID") MATCH SIMPLE
+    PRIMARY KEY ("RoomBookedID"),
+    CONSTRAINT "RoomID" FOREIGN KEY ("RoomID")
+        REFERENCES public."Room" ("RoomID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "Booking ID" FOREIGN KEY ("Booking ID")
-        REFERENCES public."Booking" ("Booking ID") MATCH SIMPLE
+    CONSTRAINT "BookingID" FOREIGN KEY ("BookingID")
+        REFERENCES public."Booking" ("BookingID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
 );
 
-ALTER TABLE IF EXISTS public."Room Booked"
+ALTER TABLE IF EXISTS public."RoomBooked"
     OWNER to postgres;
 ```
