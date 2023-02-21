@@ -29,7 +29,7 @@ ALTER TABLE IF EXISTS public."Guest"
 ```
 3.	Reservation Agent
 ```sql
-CREATE TABLE public."ReservasiAgent"
+CREATE TABLE public."ReservationAgent"
 (
     "ReservationAgentID" character varying(10) NOT NULL,
     "FirstName" character varying(15) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE public."ReservasiAgent"
     PRIMARY KEY ("ReservationAgentID")
 );
 
-ALTER TABLE IF EXISTS public."ReservasiAgent"
+ALTER TABLE IF EXISTS public."ReservationAgent"
     OWNER to postgres;
 ```
 4.	Tabel Hotel
@@ -70,7 +70,7 @@ CREATE TABLE public."Rooms"
     "Floor" character varying(10) NOT NULL,
     PRIMARY KEY ("RoomID"),
     CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotel" ("HotelID") MATCH SIMPLE
+        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -106,7 +106,7 @@ CREATE TABLE public."Bookings"
     "RoomCount" integer NOT NULL,
     PRIMARY KEY ("BookingID"),
     CONSTRAINT "ReservationAgentID_fkey" FOREIGN KEY ("ReservationAgentID")
-        REFERENCES public."ReservasiAgent" ("ReservationAgentID") MATCH SIMPLE
+        REFERENCES public."ReservationAgent" ("ReservationAgentID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
