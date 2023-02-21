@@ -44,9 +44,9 @@ CREATE TABLE public."ReservasiAgent"
 ALTER TABLE IF EXISTS public."ReservasiAgent"
     OWNER to postgres;
 ```
-4.	Buat Tabel Hotel
+4.	Tabel Hotel
 ```sql
-CREATE TABLE public."Hotel"
+CREATE TABLE public."Hotels"
 (
     "HotelID" character varying(10) NOT NULL,
     "HotelName" character(50) NOT NULL,
@@ -55,12 +55,12 @@ CREATE TABLE public."Hotel"
     PRIMARY KEY ("HotelID")
 );
 
-ALTER TABLE IF EXISTS public."Hotel"
+ALTER TABLE IF EXISTS public."Hotels"
     OWNER to postgres;
 ```    
 5.	Tabel Room
 ```sql
-CREATE TABLE public."Room"
+CREATE TABLE public."Rooms"
 (
     "RoomID" character varying(10) NOT NULL,
     "HotelID" character varying(10) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE public."Room"
         NOT VALID
 );
 
-ALTER TABLE IF EXISTS public."Room"
+ALTER TABLE IF EXISTS public."Rooms"
     OWNER to postgres;
 ```    
 6.	Tabel Booking Status
@@ -94,13 +94,13 @@ ALTER TABLE IF EXISTS public."BookingStatus"
 ```    
 7.	Tabel Booking
 ```sql
-CREATE TABLE public."Booking"
+CREATE TABLE public."Bookings"
 (
     "BookingID" character varying(10) NOT NULL,
     "ReservationAgentID" character varying(10) NOT NULL,
     "GuestID" character varying(10) NOT NULL,
     "HotelID" character varying(10) NOT NULL,
-	"BookingStatusID" character varying(10) NOT NULL,
+    "BookingStatusID" character varying(10) NOT NULL,
     "StartDate" date NOT NULL,
     "EndDate" date NOT NULL,
     "RoomCount" integer NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE public."Booking"
         ON DELETE NO ACTION
         NOT VALID,
     CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotel" ("HotelID") MATCH SIMPLE
+        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
@@ -132,17 +132,17 @@ CREATE TABLE public."Booking"
 CREATE TABLE public."RoomBooked"
 (
     "RoomBookedID" character varying(10) NOT NULL,
-	"RoomID" character varying(10) NOT NULL,
+    "RoomID" character varying(10) NOT NULL,
     "BookingID" character varying(10) NOT NULL,
     "Rate" character varying(10) NOT NULL,
     PRIMARY KEY ("RoomBookedID"),
     CONSTRAINT "RoomID" FOREIGN KEY ("RoomID")
-        REFERENCES public."Room" ("RoomID") MATCH SIMPLE
+        REFERENCES public."Rooms" ("RoomID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
     CONSTRAINT "BookingID" FOREIGN KEY ("BookingID")
-        REFERENCES public."Booking" ("BookingID") MATCH SIMPLE
+        REFERENCES public."Bookings" ("BookingID") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
