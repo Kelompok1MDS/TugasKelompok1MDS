@@ -58,6 +58,7 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
     ![](images/rooms.PNG)
 
+
 ## Syntax SQL
 
 1.  Database reservasi_hotel
