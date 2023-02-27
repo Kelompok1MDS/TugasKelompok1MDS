@@ -28,6 +28,7 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 ![WhatsApp Image 2023-02-20 at 19 17 23](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
 
+
 ## Syntax SQL
 
 1.  Database reservasi_hotel
