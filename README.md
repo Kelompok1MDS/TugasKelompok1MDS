@@ -24,7 +24,6 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 ![Skema](https://user-images.githubusercontent.com/111561203/221616937-3ca254ec-889d-4cae-9f2a-f4544739b906.jpeg)
 
-
 ### ER Diagram Database Reservasi Hotel
 
 ![ER Diagram](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
@@ -33,32 +32,45 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 1.  **Tabel Guest**
 
+    Tabel ini digunakan untuk menyimpan data tamu.
+
     ![guest1](https://user-images.githubusercontent.com/111561203/221619032-96d983a1-5d59-44cd-835c-417c642c31ac.PNG)
 
 2.  **Tabel ReservationAgent**
+
+    Tabel ini digunakan untuk menyimpan data agen yang melakukan pemesanan.
 
     ![reservationagent](https://user-images.githubusercontent.com/111561203/221617575-61705033-312a-47b2-9702-80e967c80c33.PNG)
 
 3.  **Tabel Bookings**
 
+    Tabel ini digunakan untuk mengolah data pemesanan.
+
     ![Booking Hotel](https://user-images.githubusercontent.com/111561203/221617716-5e2d584a-029d-4f16-8af1-5b5b19e6df38.PNG)
 
 4.  **Tabel Hotels**
+
+    Tabel ini digunakan untuk menyimpan data hotel.
 
     ![Hotel](https://user-images.githubusercontent.com/111561203/221617810-b26f62af-15b3-4aa9-8b59-4746ec0df3f4.PNG)
 
 5.  **Tabel BookingStatus**
 
+    Tabel ini digunakan untuk mengolah status pemesanan hotel.
+
     ![Booking status](https://user-images.githubusercontent.com/111561203/221617992-dc407d1f-40b9-4d14-a07e-edddde6dc0f4.PNG)
 
 6.  **Tabel RoomBooked**
+
+    Tabel ini digunakan untuk mengolah kamar yang akan dipesan.
 
     ![Room booked](https://user-images.githubusercontent.com/111561203/221618428-1f238290-cfe9-40bd-bac1-b360cd5dbf99.PNG)
 
 7.  **Tabel Rooms**
 
-    ![rooms](https://user-images.githubusercontent.com/111561203/221618466-370803e4-9d31-4794-b9c0-9b0b7f3f1b3c.PNG)
+    Tabel ini digunakan untuk data penjualan kamar.
 
+    ![rooms](https://user-images.githubusercontent.com/111561203/221618466-370803e4-9d31-4794-b9c0-9b0b7f3f1b3c.PNG)
 
 ## Syntax SQL
 
