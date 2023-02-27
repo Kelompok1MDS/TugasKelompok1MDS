@@ -16,12 +16,13 @@ Reservasi hotel merupakan suatu kegiatan dimana seorang tamu datang ke hotel unt
 
 ## Database Reservasi Hotel
 
-Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk membangun website reservasi hotel.
+Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk mendapatkan data utama dari reservasi hotel, seperti nama hotel, alamat hotel, dan juga harga per kamar per malam. Web scraping pada **linkedin.com** untuk mendapatkan data nama guest. Web scraping ini digunakan untuk membangun website reservasi hotel.
 
 ## **Manajemen Basis Data Reservasi Hotel**
 
 ### Skema Database Reservasi Hotel
 
+![Skema](https://user-images.githubusercontent.com/111561203/221616937-3ca254ec-889d-4cae-9f2a-f4544739b906.jpeg)
 
 
 ### ER Diagram Database Reservasi Hotel
@@ -32,31 +33,31 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 1.  **Tabel Guest**
 
-    ![](images/Guest.PNG)
+    ![guest1](https://user-images.githubusercontent.com/111561203/221619032-96d983a1-5d59-44cd-835c-417c642c31ac.PNG)
 
 2.  **Tabel ReservationAgent**
 
-    ![](images/reservationagent.PNG)
+    ![reservationagent](https://user-images.githubusercontent.com/111561203/221617575-61705033-312a-47b2-9702-80e967c80c33.PNG)
 
 3.  **Tabel Bookings**
 
-    ![](images/Booking%20Hotel.PNG)
+    ![Booking Hotel](https://user-images.githubusercontent.com/111561203/221617716-5e2d584a-029d-4f16-8af1-5b5b19e6df38.PNG)
 
 4.  **Tabel Hotels**
 
-    ![](images/Hotel.PNG)
+    ![Hotel](https://user-images.githubusercontent.com/111561203/221617810-b26f62af-15b3-4aa9-8b59-4746ec0df3f4.PNG)
 
 5.  **Tabel BookingStatus**
 
-    ![](images/Booking%20status.PNG)
+    ![Booking status](https://user-images.githubusercontent.com/111561203/221617992-dc407d1f-40b9-4d14-a07e-edddde6dc0f4.PNG)
 
 6.  **Tabel RoomBooked**
 
-    ![](images/Room%20booked.PNG)
+    ![Room booked](https://user-images.githubusercontent.com/111561203/221618428-1f238290-cfe9-40bd-bac1-b360cd5dbf99.PNG)
 
 7.  **Tabel Rooms**
 
-    ![](images/rooms.PNG)
+    ![rooms](https://user-images.githubusercontent.com/111561203/221618466-370803e4-9d31-4794-b9c0-9b0b7f3f1b3c.PNG)
 
 
 ## Syntax SQL
