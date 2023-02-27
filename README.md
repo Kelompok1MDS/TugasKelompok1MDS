@@ -85,7 +85,7 @@ ALTER TABLE IF EXISTS public."ReservationAgent"
 CREATE TABLE public."Hotels"
 (
     "HotelID" character varying(10) NOT NULL,
-    "HotelName" character(50) NOT NULL,
+    "HotelName" character varying(100) NOT NULL,
     "Address" character varying(50) NOT NULL,
     "Price" integer NOT NULL,
     PRIMARY KEY ("HotelID")
