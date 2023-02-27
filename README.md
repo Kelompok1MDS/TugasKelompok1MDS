@@ -102,10 +102,10 @@ CREATE TABLE public."Rooms"
 (
     "RoomID" character varying(10) NOT NULL,
     "HotelID" character varying(10) NOT NULL,
-    "Status" character(50) NOT NULL,
+    "Type" character varying(50) NOT NULL,
     "Number" integer NOT NULL,
-    "Type" character varying(25) NOT NULL,
     "Floor" character varying(10) NOT NULL,
+    "Status" character(10),
     PRIMARY KEY ("RoomID"),
     CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
         REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
