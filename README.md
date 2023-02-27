@@ -22,11 +22,41 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 ### Skema Database Reservasi Hotel
 
-![WhatsApp Image 2023-02-21 at 10 32 44](https://user-images.githubusercontent.com/111561203/221465445-9e89285e-3bb7-4b21-9241-aa0aa48e1d2f.jpeg)
+![Skema](https://user-images.githubusercontent.com/111561203/221465445-9e89285e-3bb7-4b21-9241-aa0aa48e1d2f.jpeg)
 
 ### ER Diagram Database Reservasi Hotel
 
-![WhatsApp Image 2023-02-20 at 19 17 23](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
+![ER Diagram](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
+
+## Tabel
+
+1.  **Tabel Guest**
+
+    ![](images/Guest.PNG)
+
+2.  **Tabel ReservationAgent**
+
+    ![](images/reservationagent.PNG)
+
+3.  **Tabel Bookings**
+
+    ![](images/Booking%20Hotel.PNG)
+
+4.  **Tabel Hotels**
+
+    ![](images/Hotel.PNG)
+
+5.  **Tabel BookingStatus**
+
+    ![](images/Booking%20status.PNG)
+
+6.  **Tabel RoomBooked**
+
+    ![](images/Room%20booked.PNG)
+
+7.  **Tabel Rooms**
+
+    ![](images/rooms.PNG)
 
 ## Syntax SQL
 
