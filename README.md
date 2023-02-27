@@ -22,7 +22,7 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 ### Skema Database Reservasi Hotel
 
-![Skema](https://user-images.githubusercontent.com/111561203/221465445-9e89285e-3bb7-4b21-9241-aa0aa48e1d2f.jpeg)
+
 
 ### ER Diagram Database Reservasi Hotel
 
@@ -115,7 +115,7 @@ ALTER TABLE IF EXISTS public."ReservationAgent"
 CREATE TABLE public."Hotels"
 (
     "HotelID" character varying(10) NOT NULL,
-    "HotelName" character(50) NOT NULL,
+    "HotelName" character varying(100) NOT NULL,
     "Address" character varying(50) NOT NULL,
     "Price" integer NOT NULL,
     PRIMARY KEY ("HotelID")
@@ -132,10 +132,10 @@ CREATE TABLE public."Rooms"
 (
     "RoomID" character varying(10) NOT NULL,
     "HotelID" character varying(10) NOT NULL,
-    "Status" character(50) NOT NULL,
+    "Type" character varying(50) NOT NULL,
     "Number" integer NOT NULL,
-    "Type" character varying(25) NOT NULL,
     "Floor" character varying(10) NOT NULL,
+    "Status" character varying(10),
     PRIMARY KEY ("RoomID"),
     CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
         REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
