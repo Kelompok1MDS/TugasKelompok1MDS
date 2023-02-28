@@ -22,7 +22,7 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 
 ### Skema Database Reservasi Hotel
 
-![Skema](https://user-images.githubusercontent.com/111561203/221616937-3ca254ec-889d-4cae-9f2a-f4544739b906.jpeg)
+![WhatsApp Image 2023-02-27 at 13 23 29 (1)](https://user-images.githubusercontent.com/111561203/221748879-7770b4ec-a27f-409f-acc1-3bd0e6a40ac2.jpeg)
 
 ### ER Diagram Database Reservasi Hotel
 
