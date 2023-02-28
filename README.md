@@ -1,4 +1,4 @@
-# Tugas Kelompok 1 MDS
+# Tugas Kelompok 1 Manajemen Sains Data
 
 ## **Nama Anggota dan Pembagian Tugas :**
 
@@ -12,21 +12,65 @@
 
 ## Reservasi Hotel
 
-Reservasi hotel merupakan suatu kegiatan dimana seorang tamu datang ke hotel untuk memesan kamar dan menginap di kamar yang telah dipesan. Pemesanan ini dapat dilakukan oleh tamu ataupun agen hotel. Di jaman berkembangnya teknologi seperti sekarang, untuk memesan hotel, tamu tidak harus datang ke hotelnya langsung, tetapi dapat dilakukan di rumah melalui online menggunakan smartphone ataupun PC. Sistem reservasi online memanfaatkan sistem informasi guna mempermudah tamu dalam mencari dan melakukan booking hotel yang sesuai keinginan tanpa harus membuka website hotel satu persatu yang akan memakan waktu dan juga tenaga. Berdasarkan pemaparan tersebut, maka kami akan membuat basis data reservasi hotel untuk memudahkan tamu melakukan booking hotel.
+Reservasi hotel merupakan layanan yang bisa digunakan masyarakat jika ingin memesan kamar hotel untuk waktu tertentu. Biasanya, reservasi hotel dilakukan beberapa hari sebelum kedatangan atau rencana check in yang akan dilakukan.Pemesanan ini dapat dilakukan oleh tamu ataupun agen hotel. Di jaman berkembangnya teknologi seperti sekarang, untuk memesan hotel, tamu tidak harus datang ke hotelnya langsung, tetapi dapat dilakukan di rumah melalui online menggunakan smartphone ataupun PC. Sistem reservasi online memanfaatkan sistem informasi guna mempermudah tamu dalam mencari dan melakukan booking hotel yang sesuai keinginan tanpa harus membuka website hotel satu persatu yang akan memakan waktu dan juga tenaga. Berdasarkan pemaparan tersebut, maka kami akan membuat basis data reservasi hotel untuk memudahkan tamu melakukan booking hotel.
 
 ## Database Reservasi Hotel
 
-Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk membangun website reservasi hotel.
+Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk mendapatkan data utama dari reservasi hotel, seperti nama hotel, alamat hotel, dan juga harga per kamar per malam. Web scraping pada **linkedin.com** untuk mendapatkan data nama guest. Web scraping pada **olx.com** untuk mendapatkan data alamat guest.  Data nomor kamar, gender, nomor telepon, email dibuat secara manual. Web scraping ini digunakan untuk membangun website reservasi hotel.
 
 ## **Manajemen Basis Data Reservasi Hotel**
 
 ### Skema Database Reservasi Hotel
 
-![WhatsApp Image 2023-02-21 at 10 32 44](https://user-images.githubusercontent.com/111561203/221465445-9e89285e-3bb7-4b21-9241-aa0aa48e1d2f.jpeg)
+![Skema](https://user-images.githubusercontent.com/111561203/221616937-3ca254ec-889d-4cae-9f2a-f4544739b906.jpeg)
 
 ### ER Diagram Database Reservasi Hotel
 
-![WhatsApp Image 2023-02-20 at 19 17 23](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
+![ER Diagram](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
+
+## Tabel
+
+1.  **Tabel Guest**
+
+    Tabel ini digunakan untuk menyimpan data tamu.
+
+    ![guest1](https://user-images.githubusercontent.com/111561203/221619032-96d983a1-5d59-44cd-835c-417c642c31ac.PNG)
+
+2.  **Tabel ReservationAgent**
+
+    Tabel ini digunakan untuk menyimpan data agen yang melakukan pemesanan.
+
+    ![reservationagent](https://user-images.githubusercontent.com/111561203/221617575-61705033-312a-47b2-9702-80e967c80c33.PNG)
+
+3.  **Tabel Bookings**
+
+    Tabel ini digunakan untuk mengolah data pemesanan.
+
+    ![Booking Hotel](https://user-images.githubusercontent.com/111561203/221617716-5e2d584a-029d-4f16-8af1-5b5b19e6df38.PNG)
+
+4.  **Tabel Hotels**
+
+    Tabel ini digunakan untuk menyimpan data hotel.
+
+    ![Hotel](https://user-images.githubusercontent.com/111561203/221617810-b26f62af-15b3-4aa9-8b59-4746ec0df3f4.PNG)
+
+5.  **Tabel BookingStatus**
+
+    Tabel ini digunakan untuk mengolah status pemesanan hotel.
+
+    ![Booking status](https://user-images.githubusercontent.com/111561203/221617992-dc407d1f-40b9-4d14-a07e-edddde6dc0f4.PNG)
+
+6.  **Tabel RoomBooked**
+
+    Tabel ini digunakan untuk mengolah kamar yang akan dipesan.
+
+    ![Room booked](https://user-images.githubusercontent.com/111561203/221618428-1f238290-cfe9-40bd-bac1-b360cd5dbf99.PNG)
+
+7.  **Tabel Rooms**
+
+    Tabel ini digunakan untuk data penjualan kamar.
+
+    ![rooms](https://user-images.githubusercontent.com/111561203/221618466-370803e4-9d31-4794-b9c0-9b0b7f3f1b3c.PNG)
 
 ## Syntax SQL
 
@@ -102,10 +146,10 @@ CREATE TABLE public."Rooms"
 (
     "RoomID" character varying(10) NOT NULL,
     "HotelID" character varying(10) NOT NULL,
-    "Status" character(50) NOT NULL,
+    "Type" character varying(50) NOT NULL,
     "Number" integer NOT NULL,
-    "Type" character varying(25) NOT NULL,
     "Floor" character varying(10) NOT NULL,
+    "Status" character varying(10),
     PRIMARY KEY ("RoomID"),
     CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
         REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
