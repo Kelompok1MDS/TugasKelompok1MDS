@@ -1,241 +1,211 @@
-# Tugas Kelompok 1 Manajemen Sains Data
+\<div align="center"\>
 
-## **Nama Anggota dan Pembagian Tugas :**
+![Logo](<https://cdn4.vectorstock.com/i/1000x1000/36/68/online-hotel-booking-laptop-with-holiday-icons-vector-18373668.jpg>[)](https://via.placeholder.com/150x150))
 
--   Irsyifa Mayzela Afnan (G1501222062) - **Data Manager**
+\# Reservasi Hotel
 
--   Teguh Prasetyo (G1501220131) - **Shiny Developer**
+[Tentang](#scroll-overview)
 
--   Dini Ramadhani (G1501221006) - **Shiny Developer**
+•
 
--   Adeline Vinda Septiani (G1501221016) - **Technical Writer**
+[Screenshot](#rice_scene-screenshot)
 
-## Reservasi Hotel
+•
+
+[Demo](#dvd-demo)
+
+•
+
+[Dokumentasi](#blue_book-documentation)
+
+\</div\>
+
+\## :bookmark_tabs: Menu
+
+\- [Tentang](#scroll-overview)
+
+\- [Screenshot](#rice_scene-screenshot)
+
+\- [Demo](#dvd-demo)
+
+\- [Dokumentasi](#blue_book-documentation)
+
+\- [Requirements](#exclamation-requirements)
+
+\- [Skema Database](#floppy_disk-skema-database)
+
+\- [ERD](#rotating_light-erd)
+
+\- [Deskripsi Data](#heavy_check_mark-deskripsi-data)
+
+\- [Struktur Folder](#open_file_folder-stuktur-folder)
+
+\- [Tim Pengembang](#smiley_cat-tim-pengembang)
+
+\## :scroll: Tentang
 
 Reservasi hotel merupakan layanan yang bisa digunakan masyarakat jika ingin memesan kamar hotel untuk waktu tertentu. Biasanya, reservasi hotel dilakukan beberapa hari sebelum kedatangan atau rencana check in yang akan dilakukan.Pemesanan ini dapat dilakukan oleh tamu ataupun agen hotel. Di jaman berkembangnya teknologi seperti sekarang, untuk memesan hotel, tamu tidak harus datang ke hotelnya langsung, tetapi dapat dilakukan di rumah melalui online menggunakan smartphone ataupun PC. Sistem reservasi online memanfaatkan sistem informasi guna mempermudah tamu dalam mencari dan melakukan booking hotel yang sesuai keinginan tanpa harus membuka website hotel satu persatu yang akan memakan waktu dan juga tenaga. Berdasarkan pemaparan tersebut, maka kami akan membuat basis data reservasi hotel untuk memudahkan tamu melakukan booking hotel.
 
-## Database Reservasi Hotel
-
 Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk mendapatkan data utama dari reservasi hotel, seperti nama hotel, alamat hotel, dan juga harga per kamar per malam. Web scraping pada **linkedin.com** untuk mendapatkan data nama guest. Web scraping pada **olx.com** untuk mendapatkan data alamat guest. Data nomor kamar, gender, nomor telepon, email dibuat secara manual. Web scraping ini digunakan untuk membangun website reservasi hotel.
 
-## **Manajemen Basis Data Reservasi Hotel**
+\## :rice_scene: Screenshot
 
-### Skema Database Reservasi Hotel
+![Logo]([https://via.placeholder.com/750x500)](https://via.placeholder.com/750x500))
 
-![WhatsApp Image 2023-02-27 at 13 23 29 (1)](https://user-images.githubusercontent.com/111561203/221748879-7770b4ec-a27f-409f-acc1-3bd0e6a40ac2.jpeg)
+\## :dvd: Demo
 
-### ER Diagram Database Reservasi Hotel
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 
-![ER Diagram](https://user-images.githubusercontent.com/111561203/221465501-78109d49-50c5-4009-a74f-de5e1eaca0bf.jpeg)
+\| url \| login \| password \|
 
-## Tabel
+\| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \| \-\-\-\-\-\-\-\-\-\-\-\-\-- \| \-\-\-\-\-\-\-- \|
 
-1.  **Tabel Guest**
+\| <http://shinyapps.io/hospital> \| admin\@mail.com \| 123 \|
 
-    Tabel ini digunakan untuk menyimpan data tamu.
+\## :blue_book: Dokumentasi
 
-    ![guest1](https://user-images.githubusercontent.com/111561203/221619032-96d983a1-5d59-44cd-835c-417c642c31ac.PNG)
+Dokumentasi penggunaan aplikasi database. Anda dapat juga membuat dokumentasi lives menggunakan readthedocs.org (opsional).
 
-2.  **Tabel ReservationAgent**
+\## :exclamation: Requirements
 
-    Tabel ini digunakan untuk menyimpan data agen yang melakukan pemesanan.
+\- Cantumkan paket R yang digunakan
 
-    ![reservationagent](https://user-images.githubusercontent.com/111561203/221617575-61705033-312a-47b2-9702-80e967c80c33.PNG)
+\- RDBMS yang digunakan
 
-3.  **Tabel Bookings**
+\- [Node]([https://nodejs.org/en/download/)](https://nodejs.org/en/download/))
 
-    Tabel ini digunakan untuk mengolah data pemesanan.
+\- [PHP]([https://php.net/)](https://php.net/))
 
-    ![Booking Hotel](https://user-images.githubusercontent.com/111561203/221617716-5e2d584a-029d-4f16-8af1-5b5b19e6df38.PNG)
+\## :floppy_disk: Skema Database
 
-4.  **Tabel Hotels**
+\## :rotating_light: ERD
 
-    Tabel ini digunakan untuk menyimpan data hotel.
+\## :heavy_check_mark: Deskripsi Data
 
-    ![Hotel](https://user-images.githubusercontent.com/111561203/221617810-b26f62af-15b3-4aa9-8b59-4746ec0df3f4.PNG)
+Berisi tentang tabel-tabel yang digunakan berikut dengan sintaks SQL DDL (CREATE).
 
-5.  **Tabel BookingStatus**
+Contoh:
 
-    Tabel ini digunakan untuk mengolah status pemesanan hotel.
+\### 1. Tabel \*Guest\*
 
-    ![Booking status](https://user-images.githubusercontent.com/111561203/221617992-dc407d1f-40b9-4d14-a07e-edddde6dc0f4.PNG)
+Tabel \*Guest\* digunakan untuk menyimpan data tamu.
 
-6.  **Tabel RoomBooked**
+\| Attribute \| Type \| Description \|
 
-    Tabel ini digunakan untuk mengolah kamar yang akan dipesan.
+\|:\-\-\-\-\-\-\-\-\-\-\-\--\|:\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\|:\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\|
 
-    ![Room booked](https://user-images.githubusercontent.com/111561203/221618428-1f238290-cfe9-40bd-bac1-b360cd5dbf99.PNG)
+\| GuestID \| character varying(10) \| Id Guest \|
 
-7.  **Tabel Rooms**
+\| FirstName \| character varying(15) \| First Name \|
 
-    Tabel ini digunakan untuk data penjualan kamar.
+\| LastName \| character varying(15) \| Last Name \|
 
-    ![rooms](https://user-images.githubusercontent.com/111561203/221618466-370803e4-9d31-4794-b9c0-9b0b7f3f1b3c.PNG)
+\| Gender \| char(9) \| Jenis kelamin \|
 
-## Syntax SQL
+\| PhoneNumber \| character varying(13) \| Nomor Telepon \|
 
-1.  Database reservasi_hotel
+\| Email \| character varying(10) \| Email \|
 
-``` sql
-CREATE DATABASE Reservasi_Hotel
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1
-    IS_TEMPLATE = False;
-```
+\| Address \| timestamp \| Alamat \|
 
-2.  Tabel Guest
+\### Create Table yo_user
 
-``` sql
-CREATE TABLE public."Guest"
+\`\`\`sql
+
+CREATE TABLE IF NOT EXISTS public.yo_user
+
 (
-    "GuestID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("GuestID")
+
+id character varying(10) COLLATE pg_catalog."default" NOT NULL,
+
+uid character varying(8) COLLATE pg_catalog."default" NOT NULL,
+
+username character varying(30) COLLATE pg_catalog."default" NOT NULL,
+
+firstname character varying(15) COLLATE pg_catalog."default" NOT NULL,
+
+lastname character varying(15) COLLATE pg_catalog."default" NOT NULL,
+
+gender smallint DEFAULT '0'::smallint,
+
+province_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT 0,
+
+city_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT 0,
+
+birthdate timestamp without time zone,
+
+linkshare_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT '0'::smallint,
+
+CONSTRAINT yo_user_pkey PRIMARY KEY (id),
+
+CONSTRAINT yo_user_city_id_fkey FOREIGN KEY (city_id)
+
+REFERENCES public.yo_region_city (city_id) MATCH SIMPLE
+
+ON UPDATE NO ACTION
+
+ON DELETE NO ACTION,
+
+CONSTRAINT yo_user_linkshare_id_fkey FOREIGN KEY (linkshare_id)
+
+REFERENCES public.yo_linkshare (id) MATCH SIMPLE
+
+ON UPDATE NO ACTION
+
+ON DELETE NO ACTION,
+
+CONSTRAINT yo_user_province_id_fkey FOREIGN KEY (province_id)
+
+REFERENCES public.yo_region_province (id_province) MATCH SIMPLE
+
+ON UPDATE NO ACTION
+
+ON DELETE NO ACTION
+
 );
 
-ALTER TABLE IF EXISTS public."Guest"
-    OWNER to postgres;
-```
+\`\`\`
 
-3.  Reservation Agent
+\## :open_file_folder: Struktur Folder
 
-``` sql
-CREATE TABLE public."ReservationAgent"
-(
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("ReservationAgentID")
-);
+\`\`\`
 
-ALTER TABLE IF EXISTS public."ReservationAgent"
-    OWNER to postgres;
-```
+.
 
-4.  Tabel Hotel
+├── app \# ShinyApps
 
-``` sql
-CREATE TABLE public."Hotels"
-(
-    "HotelID" character varying(10) NOT NULL,
-    "HotelName" character varying(100) NOT NULL,
-    "Address" character varying(50) NOT NULL,
-    "Price" integer NOT NULL,
-    PRIMARY KEY ("HotelID")
-);
+│ ├── css
 
-ALTER TABLE IF EXISTS public."Hotels"
-    OWNER to postgres;
-```
+│ │ ├── \*\*/\*.css
 
-5.  Tabel Room
+│ ├── server.R
 
-``` sql
-CREATE TABLE public."Rooms"
-(
-    "RoomID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "Type" character varying(50) NOT NULL,
-    "Number" integer NOT NULL,
-    "Floor" character varying(10) NOT NULL,
-    "Status" character varying(10),
-    PRIMARY KEY ("RoomID"),
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID
-);
+│ └── ui.R
 
-ALTER TABLE IF EXISTS public."Rooms"
-    OWNER to postgres;
-```
+├── data
 
-6.  Tabel Booking Status
+│ ├── csv
 
-``` sql
-CREATE TABLE public."BookingStatus"
-(
-    "BookingStatusID" character varying(10) NOT NULL,
-    "Status" character varying(50) NOT NULL,
-    "Description" character varying(100) NOT NULL,
-    PRIMARY KEY ("BookingStatusID")
-);
+│ │ ├── \*\*/\*.css
 
-ALTER TABLE IF EXISTS public."BookingStatus"
-    OWNER to postgres;
-```
+│ └── sql
 
-7.  Tabel Booking
+\| └── db.sql
 
-``` sql
-CREATE TABLE public."Bookings"
-(
-    "BookingID" character varying(10) NOT NULL,
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "GuestID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "BookingStatusID" character varying(10) NOT NULL,
-    "StartDate" date NOT NULL,
-    "EndDate" date NOT NULL,
-    "RoomCount" integer NOT NULL,
-    PRIMARY KEY ("BookingID"),
-    CONSTRAINT "ReservationAgentID_fkey" FOREIGN KEY ("ReservationAgentID")
-        REFERENCES public."ReservationAgent" ("ReservationAgentID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID,
-    CONSTRAINT "GuestID_fkey" FOREIGN KEY ("GuestID")
-        REFERENCES public."Guest" ("GuestID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID,
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID,
-     CONSTRAINT "BookingStatusID_fkey" FOREIGN KEY ("BookingStatusID")
-        REFERENCES public."BookingStatus" ("BookingStatusID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID
-);
-```
+├── src \# Project source code
 
-8.  Tabel Room Booked
+├── doc \# Doc for the project
 
-``` sql
-CREATE TABLE public."RoomBooked"
-(
-    "RoomBookedID" character varying(10) NOT NULL,
-    "RoomID" character varying(10) NOT NULL,
-    "BookingID" character varying(10) NOT NULL,
-    "Rate" character varying(10) NOT NULL,
-    PRIMARY KEY ("RoomBookedID"),
-    CONSTRAINT "RoomID" FOREIGN KEY ("RoomID")
-        REFERENCES public."Rooms" ("RoomID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID,
-    CONSTRAINT "BookingID" FOREIGN KEY ("BookingID")
-        REFERENCES public."Bookings" ("BookingID") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID
-);
+├── .gitignore
 
-ALTER TABLE IF EXISTS public."RoomBooked"
-    OWNER to postgres;
-```
+├── LICENSE
+
+└── README.md
+
+\`\`\`
+
+\## :smiley_cat: Tim Pengembang
+
+\- [\@walternascimentobarroso]([https://walternascimentobarroso.github.io/)](https://walternascimentobarroso.github.io/))
+
+\- Full-Stack Developer: [Alfa Nugraha]([https://github.com/alfanugraha)](https://github.com/alfanugraha)) G1501211013
