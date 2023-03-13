@@ -34,14 +34,29 @@ Reservasi hotel merupakan layanan yang bisa digunakan masyarakat jika ingin meme
 
 ## :rice_scene: Screenshot
 
+Shiny adalah paket R yang membuatnya mudah untuk membangun aplikasi web interaktif langsung dari R. Pengguna dapat meng-host aplikasi mandiri di halaman web atau menanamkannya dalam dokumen R Markdown atau membangun dashboard. 
 
-![Data Hotel](https://user-images.githubusercontent.com/111561203/224636743-d923959a-afb5-47a7-92fb-e8dc2fbb666f.png)
+Pada sistem manajemen database reservasi hotel ini, dibuat dashboard untuk untuk merangkum tampilan /informasi penting dalam satu layar tentang database reservasi hotel.
 
-![Data Guest](https://user-images.githubusercontent.com/111561203/224636816-e389fd83-c695-4a25-84d7-4e3eb4ed98fd.PNG)
+### 1. Data Hotel
+Pada data hotel ini menampilkan informasi tentang hotel yang tersedia pada database.
 
-![Data Reservation Agent](https://user-images.githubusercontent.com/111561203/224636915-6854ffa6-db5f-400d-a5aa-35cd9630c36b.PNG)
+![Data Hotel](https://user-images.githubusercontent.com/111561203/224643295-203274c1-ebc2-402a-82c3-2f75745dd621.png)
 
-![Data Kamar](https://user-images.githubusercontent.com/111561203/224636964-54a7951f-4eb0-4780-8b5c-c4b94ffff2e5.PNG)
+### 2. Data Guest
+Pada data guest ini akan ditampilkan informasi tentang guest yang melakukan reservasi hotel.
+
+![Data Guest](https://user-images.githubusercontent.com/111561203/224643673-e5bba5af-152e-4c93-970c-594ac4bc1839.png)
+
+### 3. Data Reservation Agent
+Pada data reservation agent ini akan ditampilkan informasi tentang agen yang melakukan reservasi hotel.
+
+![Data Reservation Agent](https://user-images.githubusercontent.com/111561203/224643777-255818af-58c4-4288-ab34-e433a2831f31.png)
+
+### 4. Data Kamar
+Pada data kamar ini akan akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
+
+![Data Kamar](https://user-images.githubusercontent.com/111561203/224643946-b6a66a59-dee9-404c-a744-29f1c296a597.png)
 
 ## :floppy_disk: Skema Database
 
@@ -344,5 +359,9 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 
 ## :smiley_cat: Tim Pengembang
 
-- [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
+- [Kelompok 1 MDS] (https://github.com/Kelompok1MDS)
+- Data Manager : [Irsyifa Mayzela Afnan] (https://github.com/irsyifa) G1501222062
+- Shiny Developer : [Teguh Prasetyo] (https://github.com/teguhprasetyo08) G1501220131
+- Shiny Developer : [Dini Ramadhani] (https://github.com/diniramadhani) G1501220131
+- Technical Writer : [Adeline Vinda Septiani] (https://github.com/Adelievs000) G1501221006
 - Full-Stack Developer: [Alfa Nugraha](https://github.com/alfanugraha) G1501211013
