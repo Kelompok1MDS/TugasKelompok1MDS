@@ -58,6 +58,54 @@ Pada data kamar ini akan akan ditampilkan informasi tentang kamar di masing-masi
 
 ![Data Kamar](https://user-images.githubusercontent.com/111561203/224643946-b6a66a59-dee9-404c-a744-29f1c296a597.png)
 
+## :dvd: Demo
+
+https://m70mrd-teguh-prasetyo.shinyapps.io/TugasKelompok1MDS_v2/?_ga=2.219344665.1065288786.1678596004-1380562267.1678596004
+
+## :blue_book: Dokumentasi 
+
+Dokumentasi penggunaan aplikasi database.
+
+![Database Reservasi Hotel](https://user-images.githubusercontent.com/111561203/224660088-9a9dcac7-34d0-45c3-a3a4-653395d9360b.png)
+
+![Tabel](https://user-images.githubusercontent.com/111561203/224660158-ab311064-96dc-41c2-8deb-09483ec7fe67.png)
+
+![Tabel BookingStatus](https://user-images.githubusercontent.com/111561203/224660184-410602d0-f8ff-4211-94b5-c2079c66ad37.png)
+
+![Tabel Bookings](https://user-images.githubusercontent.com/111561203/224660217-48764a97-ff88-4748-8e35-c1651a8e9626.png)
+
+![Tabel Guest](https://user-images.githubusercontent.com/111561203/224660263-4155996f-6f3e-48dc-b143-ed401a232354.png)
+
+![Tabel Hotels](https://user-images.githubusercontent.com/111561203/224660339-47133007-63fa-4c00-855a-a67982572a75.png)
+
+![Tabel ReservationAgent](https://user-images.githubusercontent.com/111561203/224660383-a1d1dd60-2f03-473f-bebf-26543658c21a.png)
+
+![Tabel RoomBooked](https://user-images.githubusercontent.com/111561203/224660405-fd998390-d95a-4d4e-8745-75c95f2c2183.png)
+
+![Rooms](https://user-images.githubusercontent.com/111561203/224660464-18818970-a737-4ac6-8147-302cfa452016.png)
+
+
+
+## :exclamation: Requirements
+
+- Paket R yang digunakan yaitu :
+
+library(shiny)
+
+library(shinydashboard)
+
+library(RPostgreSQL)
+
+library(DBI)
+
+library(DT)
+
+- RDBMS yang digunakan adalah PostgreSQL
+
+- Front End menggunakan RShiny UI
+
+- Back End menggunakan RShiny Server
+
 ## :floppy_disk: Skema Database
 
 ![Skema](https://user-images.githubusercontent.com/111561203/223318819-697312ff-99ff-4d7e-822e-34860066556e.jpeg)
@@ -346,8 +394,7 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 │   ├── server.R
 │   └── ui.R
 ├── data 
-│   ├── csv
-│   │   ├── **/*.css
+│   ├── xlsx
 │   └── sql
 |       └── db.sql
 ├── src           # Project source code
