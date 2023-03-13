@@ -199,7 +199,11 @@ CREATE TABLE public."Rooms"
         NOT VALID
 );
 
-### 5. Tabel *BookingStatus
+ALTER TABLE IF EXISTS public."Rooms"
+    OWNER to postgres;
+```
+
+### 5. Tabel *BookingStatus*
 
 Tabel *BookingStatus* digunakan untuk mengolah status pemesanan hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
