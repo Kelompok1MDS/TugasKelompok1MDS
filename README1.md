@@ -32,6 +32,16 @@
 
 Reservasi hotel merupakan layanan yang bisa digunakan masyarakat jika ingin memesan kamar hotel untuk waktu tertentu. Biasanya, reservasi hotel dilakukan beberapa hari sebelum kedatangan atau rencana check in yang akan dilakukan.Pemesanan ini dapat dilakukan oleh tamu ataupun agen hotel. Di jaman berkembangnya teknologi seperti sekarang, untuk memesan hotel, tamu tidak harus datang ke hotelnya langsung, tetapi dapat dilakukan di rumah melalui online menggunakan smartphone ataupun PC. Sistem reservasi online memanfaatkan sistem informasi guna mempermudah tamu dalam mencari dan melakukan booking hotel yang sesuai keinginan tanpa harus membuka website hotel satu persatu yang akan memakan waktu dan juga tenaga. Berdasarkan pemaparan tersebut, maka kami akan membuat basis data reservasi hotel untuk memudahkan tamu melakukan booking hotel.
 
+## :rice_scene: Screenshot
+
+
+![Data Hotel](https://user-images.githubusercontent.com/111561203/224636743-d923959a-afb5-47a7-92fb-e8dc2fbb666f.png)
+
+![Data Guest](https://user-images.githubusercontent.com/111561203/224636816-e389fd83-c695-4a25-84d7-4e3eb4ed98fd.PNG)
+
+![Data Reservation Agent](https://user-images.githubusercontent.com/111561203/224636915-6854ffa6-db5f-400d-a5aa-35cd9630c36b.PNG)
+
+![Data Kamar](https://user-images.githubusercontent.com/111561203/224636964-54a7951f-4eb0-4780-8b5c-c4b94ffff2e5.PNG)
 
 ## :floppy_disk: Skema Database
 
@@ -189,7 +199,7 @@ CREATE TABLE public."Rooms"
         NOT VALID
 );
 
-### 5. Tabel *BookingStatus*
+### 5. Tabel *BookingStatus
 
 Tabel *BookingStatus* digunakan untuk mengolah status pemesanan hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
