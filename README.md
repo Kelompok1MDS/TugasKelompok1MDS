@@ -389,8 +389,6 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 ```
 .
 ├── app           # ShinyApps
-│   ├── css
-│   │   ├── **/*.css
 │   ├── server.R
 │   └── ui.R
 ├── data 
@@ -401,7 +399,7 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 ├── doc           # Doc for the project
 ├── .gitignore
 ├── LICENSE
-└── README1.md
+└── README.md
 ```
 
 ## :smiley_cat: Tim Pengembang
