@@ -14,8 +14,8 @@
 •
 [Dokumentasi](#blue_book-dokumentasi)
 
+![image](https://user-images.githubusercontent.com/111561203/228005149-02dfdaac-1e3b-48eb-bed1-26d947daa3d6.png)
 
-![image](https://user-images.githubusercontent.com/111561203/228001411-9729a033-96ff-4f20-8f13-d3a1bde137ff.png)
 
 </div>
 
