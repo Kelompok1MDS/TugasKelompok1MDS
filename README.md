@@ -5,27 +5,28 @@
 
 # Sistem Informasi Pemesanan Tiket Hotel
 
-[Tentang](#scroll-overview)
+•
+[Tentang](#scroll-tentang)
 •
 [Screenshot](#rice_scene-screenshot)
 •
 [Demo](#dvd-demo)
 •
-[Dokumentasi](#blue_book-documentation)
+[Dokumentasi](#blue_book-dokumentasi)
 
 </div>
 
 ## :bookmark_tabs: Menu
 
-- [Tentang](#scroll-overview)
+- [Tentang](#scroll-tentang)
 - [Screenshot](#rice_scene-screenshot)
 - [Demo](#dvd-demo)
-- [Dokumentasi](#blue_book-documentation)
+- [Dokumentasi](#blue_book-dokumentasi)
 - [Requirements](#exclamation-requirements)
 - [Skema Database](#floppy_disk-skema-database)
 - [ERD](#rotating_light-erd)
 - [Deskripsi Data](#heavy_check_mark-deskripsi-data)
-- [Struktur Folder](#open_file_folder-stuktur-folder)
+- [Struktur Folder](#open_file_folder-struktur-folder)
 - [Tim Pengembang](#smiley_cat-tim-pengembang)
 
 ## :scroll: Tentang
@@ -38,52 +39,57 @@ Shiny adalah paket R yang membuatnya mudah untuk membangun aplikasi web interakt
 
 Pada sistem manajemen database reservasi hotel ini, dibuat dashboard untuk untuk merangkum tampilan /informasi penting dalam satu layar tentang database reservasi hotel.
 
-### 1. Data Hotel
+### 1. Dashboard
+Pada dashboard ini menampilkan halaman tim pengembang, grafik pengunjung, dan grafik tagihan.
+
+#### a. Tim Pengembang
+
+![tim pengembang](https://user-images.githubusercontent.com/111561203/227986377-1306d014-645f-4ad1-b6a7-6b0d4b70f9e4.PNG)
+
+#### b. Grafik Pengunjung
+
+![grafik pengunjung](https://user-images.githubusercontent.com/111561203/227986924-b72f8242-e994-446e-a728-0a23f9810ad4.PNG)
+
+#### c. Grafik Tagihan
+
+![grafik tagihan](https://user-images.githubusercontent.com/111561203/227987064-d79651fc-d869-4802-a064-bc248428d2c3.PNG)
+
+### 2. Data Hotel
 Pada data hotel ini menampilkan informasi tentang hotel yang tersedia pada database.
 
-![Data Hotel](https://user-images.githubusercontent.com/111561203/224643295-203274c1-ebc2-402a-82c3-2f75745dd621.png)
+![data hotel](https://user-images.githubusercontent.com/111561203/227987208-36b60fc4-147f-4cc2-930f-5ff1067c4d99.PNG)
 
-### 2. Data Guest
+### 3. Data Guest
 Pada data guest ini akan ditampilkan informasi tentang guest yang melakukan reservasi hotel.
 
-![Data Guest](https://user-images.githubusercontent.com/111561203/224643673-e5bba5af-152e-4c93-970c-594ac4bc1839.png)
-
-### 3. Data Reservation Agent
-Pada data reservation agent ini akan ditampilkan informasi tentang agen yang melakukan reservasi hotel.
-
-![Data Reservation Agent](https://user-images.githubusercontent.com/111561203/224643777-255818af-58c4-4288-ab34-e433a2831f31.png)
+![data guest](https://user-images.githubusercontent.com/111561203/227987354-3f56e07a-3407-4a35-8c33-6dbab86e1bc5.PNG)
 
 ### 4. Data Kamar
-Pada data kamar ini akan akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
+Pada data kamar ini akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
 
-![Data Kamar](https://user-images.githubusercontent.com/111561203/224643946-b6a66a59-dee9-404c-a744-29f1c296a597.png)
+![data kamar](https://user-images.githubusercontent.com/111561203/227987528-017c876c-4a74-481a-8b64-4990b5934167.PNG)
+
+### 5. Riwayat Pemesanan
+Pada riwayat pemesanan ini akan ditampilkan informasi tentang riwayat reservasi oleh guest berdasarkan masing-masing hotel.
+
+![riwayat pemesanan 1](https://user-images.githubusercontent.com/111561203/227990168-3c8e0227-69c5-4c6b-9255-54d2d576f81c.png)
+
 
 ## :dvd: Demo
 
-https://m70mrd-teguh-prasetyo.shinyapps.io/TugasKelompok1MDS_v2/?_ga=2.219344665.1065288786.1678596004-1380562267.1678596004
+https://m70mrd-teguh-prasetyo.shinyapps.io/HotelReservationIS/
 
 ## :blue_book: Dokumentasi 
 
 Dokumentasi penggunaan aplikasi database.
 
-![Database Reservasi Hotel](https://user-images.githubusercontent.com/111561203/224660088-9a9dcac7-34d0-45c3-a3a4-653395d9360b.png)
+![tabel booking](https://user-images.githubusercontent.com/111561203/227853687-43535a6a-45f3-49c7-bb76-bc9d33452ac3.PNG)
 
-![Tabel](https://user-images.githubusercontent.com/111561203/224660158-ab311064-96dc-41c2-8deb-09483ec7fe67.png)
+![tabel guest](https://user-images.githubusercontent.com/111561203/227853625-c2604d42-79e2-4017-a66c-f63e3ad73a14.PNG)
 
-![Tabel BookingStatus](https://user-images.githubusercontent.com/111561203/224660184-410602d0-f8ff-4211-94b5-c2079c66ad37.png)
+![tabel hotel](https://user-images.githubusercontent.com/111561203/227853874-0e52c44c-17ee-4d89-8bb6-a4537de6c769.PNG)
 
-![Tabel Bookings](https://user-images.githubusercontent.com/111561203/224660217-48764a97-ff88-4748-8e35-c1651a8e9626.png)
-
-![Tabel Guest](https://user-images.githubusercontent.com/111561203/224660263-4155996f-6f3e-48dc-b143-ed401a232354.png)
-
-![Tabel Hotels](https://user-images.githubusercontent.com/111561203/224660339-47133007-63fa-4c00-855a-a67982572a75.png)
-
-![Tabel ReservationAgent](https://user-images.githubusercontent.com/111561203/224660383-a1d1dd60-2f03-473f-bebf-26543658c21a.png)
-
-![Tabel RoomBooked](https://user-images.githubusercontent.com/111561203/224660405-fd998390-d95a-4d4e-8745-75c95f2c2183.png)
-
-![Rooms](https://user-images.githubusercontent.com/111561203/224660464-18818970-a737-4ac6-8147-302cfa452016.png)
-
+![tabel room booked](https://user-images.githubusercontent.com/111561203/227854094-689e5309-6429-46a2-a7a8-d3a9f98b947e.PNG)
 
 
 ## :exclamation: Requirements
@@ -100,29 +106,32 @@ library(DBI)
 
 library(DT)
 
+library(plotly)
+
 - RDBMS yang digunakan adalah PostgreSQL
 
 - Front End menggunakan RShiny UI
 
 - Back End menggunakan RShiny Server
 
+
 ## :floppy_disk: Skema Database
 
-![Skema](https://user-images.githubusercontent.com/111561203/223318819-697312ff-99ff-4d7e-822e-34860066556e.jpeg)
+![Skema](https://user-images.githubusercontent.com/111561203/227851188-a3546cf5-5234-4cc8-ba27-cccc5a6b24a0.jpeg)
 
 
 ## :rotating_light: ERD
 
-![ERD](https://user-images.githubusercontent.com/111561203/223318979-f7cdd098-b937-414d-9dca-c28183c70900.jpeg)
+![ERD](https://user-images.githubusercontent.com/111561203/227851269-f3602ec9-10df-499e-963b-332ab7fd8574.jpeg)
 
 ## :heavy_check_mark: Deskripsi Data
 
 Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk mendapatkan data utama dari reservasi hotel, seperti nama hotel, alamat hotel, dan juga harga per kamar per malam. Web scraping pada **linkedin.com** untuk mendapatkan data nama guest. Web scraping pada **olx.com** untuk mendapatkan data alamat guest. Data nomor kamar, gender, nomor telepon, email dibuat secara manual. Web scraping ini digunakan untuk membangun website reservasi hotel.
 
-### Create Database Reservasi_Hotel
+### Create Database reservasi_hotel
 
 ``` sql
-CREATE DATABASE Reservasi_Hotel
+CREATE DATABASE reservasi_hotel
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -146,28 +155,28 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | address                 | character varying(50) | Alamat                        |
 
 
-### Create Table Guest
+### Create Table guest
 
 ``` sql
-CREATE TABLE public."Guest"
+CREATE TABLE public.guest
 (
-    "GuestID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("GuestID")
+    guest_id character varying(10) NOT NULL,
+    firstname character varying(15) NOT NULL,
+    lastname character varying(15),
+    address character varying(50) NOT NULL,
+    gender character(9) NOT NULL,
+    phonenumber character varying(13) NOT NULL,
+    email character varying(50) NOT NULL,
+    PRIMARY KEY (guest_id)
 );
 
-ALTER TABLE IF EXISTS public."Guest"
+ALTER TABLE IF EXISTS public.guest
     OWNER to postgres;
 ```
 
 ### 2. Tabel *reservation_agent*
 
-Tabel *Reservation Agent* digunakan untuk menyimpan data agen yang melakukan pemesanan.
+Tabel *reservation_agent* digunakan untuk menyimpan data agen yang melakukan pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -181,22 +190,22 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | address                 | character varying(50) | Alamat                        |
 
 
-### Create Table Reservation Agent
+### Create Table reservation_agent
 
 ``` sql
-CREATE TABLE public."ReservationAgent"
+CREATE TABLE public.reservation_agent
 (
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("ReservationAgentID")
+    reservationagent_id character varying(10) NOT NULL,
+    firstname character varying(15) NOT NULL,
+    lastname character varying(15),
+    address character varying(50) NOT NULL,
+    gender character(9) NOT NULL,
+    phonenumber character varying(13) NOT NULL,
+    email character varying(50) NOT NULL,
+    PRIMARY KEY (reservationagent_id)
 );
 
-ALTER TABLE IF EXISTS public."ReservationAgent"
+ALTER TABLE IF EXISTS public.reservation_agent
     OWNER to postgres;
 ```
 
@@ -213,19 +222,19 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | price                   | integer               | Harga                         |
 
 
-### Create Table Hotels
+### Create Table hotels
 
 ``` sql
-CREATE TABLE public."Hotels"
+CREATE TABLE public.hotels
 (
-    "HotelID" character varying(10) NOT NULL,
-    "HotelName" character varying(100) NOT NULL,
-    "Address" character varying(50) NOT NULL,
-    "Price" integer NOT NULL,
-    PRIMARY KEY ("HotelID")
+    hotel_id character varying(10) NOT NULL,
+    hotelname character varying(100) NOT NULL,
+    address character varying(50) NOT NULL,
+    price integer NOT NULL,
+    PRIMARY KEY (hotel_id)
 );
 
-ALTER TABLE IF EXISTS public."Hotels"
+ALTER TABLE IF EXISTS public.hotels
     OWNER to postgres;
 ```
 
@@ -243,32 +252,29 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | floor                   | character varying(25) | Lantai                        |
 | status                  | character varying(25) | Status Kamar                  |
 
-### Create Table Rooms
+### Create Table rooms
 
 ``` sql
-CREATE TABLE public."Rooms"
+CREATE TABLE public.rooms
 (
-    "RoomID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "Type" character varying(50) NOT NULL,
-    "Number" integer NOT NULL,
-    "Floor" character varying(10) NOT NULL,
-    "Status" character varying(10),
-    PRIMARY KEY ("RoomID"),
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
+    room_id character varying(10) NOT NULL,
+    hotel_id character varying(10) NOT NULL,
+    type character varying(50) NOT NULL,
+    number integer NOT NULL,
+    floor character varying(10) NOT NULL,
+    status character varying(10),
+    PRIMARY KEY (room_id),
+    CONSTRAINT hotel_id_fkey FOREIGN KEY (hotel_id)
+        REFERENCES public.hotels (hotel_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
 );
-
-ALTER TABLE IF EXISTS public."Rooms"
-    OWNER to postgres;
 ```
 
 ### 5. Tabel *booking_status*
 
-Tabel *BookingStatus* digunakan untuk mengolah status pemesanan hotel.
+Tabel *booking_status* digunakan untuk mengolah status pemesanan hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -278,24 +284,24 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | status                  | character varying(50) | Status Booking                |
 
 
-### Create Table BookingStatus
+### Create Table booking_status
 
 ``` sql
-CREATE TABLE public."BookingStatus"
+CREATE TABLE public.booking_status
 (
-    "BookingStatusID" character varying(10) NOT NULL,
-    "Status" character varying(50) NOT NULL,
-    "Description" character varying(100) NOT NULL,
-    PRIMARY KEY ("BookingStatusID")
+    bookingstatus_id character varying(10) NOT NULL,
+    status character varying(50) NOT NULL,
+    description character varying(100) NOT NULL,
+    PRIMARY KEY (bookingstatus_id)
 );
 
-ALTER TABLE IF EXISTS public."BookingStatus"
+ALTER TABLE IF EXISTS public.booking_status
     OWNER to postgres;
 ```
 
 ### 6. Tabel *bookings*
 
-Tabel *Bookings* digunakan untuk mengolah data pemesanan.
+Tabel *bookings* digunakan untuk mengolah data pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -309,37 +315,37 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | bookingstatus_id        | character varying(50) | Id BookingStatus              |
 | reservationagent_id     | character varying(10) | Id Reservation Agent          |
 
-### Create Table Bookings
+### Create Table bookings
 
 ``` sql
-CREATE TABLE public."Bookings"
+CREATE TABLE public.bookings
 (
-    "BookingID" character varying(10) NOT NULL,
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "GuestID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "BookingStatusID" character varying(10) NOT NULL,
-    "StartDate" date NOT NULL,
-    "EndDate" date NOT NULL,
-    "RoomCount" integer NOT NULL,
-    PRIMARY KEY ("BookingID"),
-    CONSTRAINT "ReservationAgentID_fkey" FOREIGN KEY ("ReservationAgentID")
-        REFERENCES public."ReservationAgent" ("ReservationAgentID") MATCH SIMPLE
+    booking_id character varying(10) NOT NULL,
+    reservationagent_id character varying(10) NOT NULL,
+    guest_id character varying(10) NOT NULL,
+    hotel_id character varying(10) NOT NULL,
+    bookingstatus_id character varying(10) NOT NULL,
+    startdate date NOT NULL,
+    enddate date NOT NULL,
+    roomcount integer NOT NULL,
+    PRIMARY KEY (booking_id),
+    CONSTRAINT reservationagent_id_fkey FOREIGN KEY (reservationagent_id)
+        REFERENCES public.reservation_agent (reservationagent_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "GuestID_fkey" FOREIGN KEY ("GuestID")
-        REFERENCES public."Guest" ("GuestID") MATCH SIMPLE
+    CONSTRAINT guest_id_fkey FOREIGN KEY (guest_id)
+        REFERENCES public.guest (guest_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
+    CONSTRAINT hotel_id_fkey FOREIGN KEY (hotel_id)
+        REFERENCES public.hotels (hotel_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-     CONSTRAINT "BookingStatusID_fkey" FOREIGN KEY ("BookingStatusID")
-        REFERENCES public."BookingStatus" ("BookingStatusID") MATCH SIMPLE
+     CONSTRAINT bookingstatus_id_fkey FOREIGN KEY (bookingstatus_id)
+        REFERENCES public.booking_status (bookingstatus_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -358,29 +364,29 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | booking_id             | character varying(10) | Id Bookings                   |
 | rate                    | character varying(10) | Rating                        |
 
-### Create Table RoomBooked
+### Create Table room_booked
 
 ``` sql
-CREATE TABLE public."RoomBooked"
+CREATE TABLE public.room_booked
 (
-    "RoomBookedID" character varying(10) NOT NULL,
-    "RoomID" character varying(10) NOT NULL,
-    "BookingID" character varying(10) NOT NULL,
-    "Rate" character varying(10) NOT NULL,
-    PRIMARY KEY ("RoomBookedID"),
-    CONSTRAINT "RoomID" FOREIGN KEY ("RoomID")
-        REFERENCES public."Rooms" ("RoomID") MATCH SIMPLE
+    roombooked_id character varying(10) NOT NULL,
+    room_id character varying(10) NOT NULL,
+    booking_id character varying(10) NOT NULL,
+    rate character varying(10) NOT NULL,
+    PRIMARY KEY (roombooked_id),
+    CONSTRAINT room_id FOREIGN KEY (room_id)
+        REFERENCES public.rooms (room_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "BookingID" FOREIGN KEY ("BookingID")
-        REFERENCES public."Bookings" ("BookingID") MATCH SIMPLE
+    CONSTRAINT booking_id FOREIGN KEY (booking_id)
+        REFERENCES public.bookings (booking_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
 );
 
-ALTER TABLE IF EXISTS public."RoomBooked"
+ALTER TABLE IF EXISTS public.room_booked
     OWNER to postgres;
 ```
 
@@ -392,8 +398,10 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 │   ├── server.R
 │   └── ui.R
 ├── data 
-│   ├── insert sql
-|       └── word insert sql 
+│   ├── insert sql query
+|       └── word insert sql query
+|   ├── xlsx
+|       └── excel tabel data
 │   └── sql
 |       └── db.sql
 ├── src           # Project source code
@@ -406,8 +414,25 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 ## :smiley_cat: Tim Pengembang
 
 - [Kelompok 1 MDS](https://github.com/Kelompok1MDS)
+
 - Data Manager : [Irsyifa Mayzela Afnan](https://github.com/irsyifa) G1501222062
+
+![image](https://user-images.githubusercontent.com/111561203/227850526-85963b40-de8b-442e-b180-11f294bdefff.png)
+
+
 - Shiny Developer : [Teguh Prasetyo](https://github.com/teguhprasetyo08) G1501220131
+
+![image](https://user-images.githubusercontent.com/111561203/227850496-12801984-80b0-4940-8f54-704a9eb74d2c.png)
+
+
 - Shiny Developer : [Dini Ramadhani](https://github.com/diniramadhani) G1501220131
+
+![image](https://user-images.githubusercontent.com/111561203/227850560-4046c2ae-76ea-49e9-847d-7ce7a3113407.png)
+
+
 - Technical Writer : [Adeline Vinda Septiani](https://github.com/Adelievs000) G1501221006
+
+![image](https://user-images.githubusercontent.com/111561203/227850602-2c7eb4c0-0eea-4fe5-80e3-c9793cc7d3b4.png)
+
+
 - Full-Stack Developer: [Alfa Nugraha](https://github.com/alfanugraha) G1501211013
