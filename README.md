@@ -73,8 +73,6 @@ Dokumentasi penggunaan aplikasi database.
 
 ![tabel hotel](https://user-images.githubusercontent.com/111561203/227853874-0e52c44c-17ee-4d89-8bb6-a4537de6c769.PNG)
 
-![Tabel ReservationAgent](https://user-images.githubusercontent.com/111561203/224660383-a1d1dd60-2f03-473f-bebf-26543658c21a.png)
-
 ![tabel room booked](https://user-images.githubusercontent.com/111561203/227854094-689e5309-6429-46a2-a7a8-d3a9f98b947e.PNG)
 
 
@@ -111,7 +109,7 @@ library(DT)
 
 Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web scraping**. Web scraping merupakan sekumpulan teknik untuk mendapatkan informasi dari sebuah website secara otomatis tanpa harus menyalinnya secara manual. Pada database ini, kelompok kami akan menerapkan teknik web scraping pada **tiket.com** untuk mendapatkan data utama dari reservasi hotel, seperti nama hotel, alamat hotel, dan juga harga per kamar per malam. Web scraping pada **linkedin.com** untuk mendapatkan data nama guest. Web scraping pada **olx.com** untuk mendapatkan data alamat guest. Data nomor kamar, gender, nomor telepon, email dibuat secara manual. Web scraping ini digunakan untuk membangun website reservasi hotel.
 
-### Create Database Reservasi_Hotel
+### Create Database reservasi_hotel
 
 ``` sql
 CREATE DATABASE reservasi_hotel
