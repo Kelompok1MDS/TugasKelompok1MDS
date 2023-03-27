@@ -14,6 +14,9 @@
 •
 [Dokumentasi](#blue_book-dokumentasi)
 
+
+![image](https://user-images.githubusercontent.com/111561203/228001411-9729a033-96ff-4f20-8f13-d3a1bde137ff.png)
+
 </div>
 
 ## :bookmark_tabs: Menu
