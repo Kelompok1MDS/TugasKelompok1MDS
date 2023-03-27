@@ -379,8 +379,10 @@ ALTER TABLE IF EXISTS public.room_booked
 │   ├── server.R
 │   └── ui.R
 ├── data 
-│   ├── insert sql
-|       └── word insert sql 
+│   ├── insert sql query
+|       └── word insert sql query
+|   ├── xlsx
+|       └── excel data sql
 │   └── sql
 |       └── db.sql
 ├── src           # Project source code
