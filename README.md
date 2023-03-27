@@ -3,7 +3,7 @@
 
 ![image](https://user-images.githubusercontent.com/111561203/223317186-0630da8c-c88b-4531-bd94-c56953138279.png)
 
-# Manajemen Basis Data Pemesanan Tiket Hotel
+# Sistem Informasi Pemesanan Tiket Hotel
 
 [Tentang](#scroll-overview)
 •
