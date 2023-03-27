@@ -5,27 +5,28 @@
 
 # Sistem Informasi Pemesanan Tiket Hotel
 
-[Tentang](#scroll-overview)
+•
+[Tentang](#scroll-tentang)
 •
 [Screenshot](#rice_scene-screenshot)
 •
 [Demo](#dvd-demo)
 •
-[Dokumentasi](#blue_book-documentation)
+[Dokumentasi](#blue_book-dokumentasi)
 
 </div>
 
 ## :bookmark_tabs: Menu
 
-- [Tentang](#scroll-overview)
+- [Tentang](#scroll-tentang)
 - [Screenshot](#rice_scene-screenshot)
 - [Demo](#dvd-demo)
-- [Dokumentasi](#blue_book-documentation)
+- [Dokumentasi](#blue_book-dokumentasi)
 - [Requirements](#exclamation-requirements)
 - [Skema Database](#floppy_disk-skema-database)
 - [ERD](#rotating_light-erd)
 - [Deskripsi Data](#heavy_check_mark-deskripsi-data)
-- [Struktur Folder](#open_file_folder-stuktur-folder)
+- [Struktur Folder](#open_file_folder-struktur-folder)
 - [Tim Pengembang](#smiley_cat-tim-pengembang)
 
 ## :scroll: Tentang
@@ -66,24 +67,15 @@ https://m70mrd-teguh-prasetyo.shinyapps.io/TugasKelompok1MDS_v2/?_ga=2.219344665
 
 Dokumentasi penggunaan aplikasi database.
 
-![Database Reservasi Hotel](https://user-images.githubusercontent.com/111561203/224660088-9a9dcac7-34d0-45c3-a3a4-653395d9360b.png)
+![tabel booking](https://user-images.githubusercontent.com/111561203/227853687-43535a6a-45f3-49c7-bb76-bc9d33452ac3.PNG)
 
-![Tabel](https://user-images.githubusercontent.com/111561203/224660158-ab311064-96dc-41c2-8deb-09483ec7fe67.png)
+![tabel guest](https://user-images.githubusercontent.com/111561203/227853625-c2604d42-79e2-4017-a66c-f63e3ad73a14.PNG)
 
-![Tabel BookingStatus](https://user-images.githubusercontent.com/111561203/224660184-410602d0-f8ff-4211-94b5-c2079c66ad37.png)
-
-![Tabel Bookings](https://user-images.githubusercontent.com/111561203/224660217-48764a97-ff88-4748-8e35-c1651a8e9626.png)
-
-![Tabel Guest](https://user-images.githubusercontent.com/111561203/224660263-4155996f-6f3e-48dc-b143-ed401a232354.png)
-
-![Tabel Hotels](https://user-images.githubusercontent.com/111561203/224660339-47133007-63fa-4c00-855a-a67982572a75.png)
+![tabel hotel](https://user-images.githubusercontent.com/111561203/227853874-0e52c44c-17ee-4d89-8bb6-a4537de6c769.PNG)
 
 ![Tabel ReservationAgent](https://user-images.githubusercontent.com/111561203/224660383-a1d1dd60-2f03-473f-bebf-26543658c21a.png)
 
-![Tabel RoomBooked](https://user-images.githubusercontent.com/111561203/224660405-fd998390-d95a-4d4e-8745-75c95f2c2183.png)
-
-![Rooms](https://user-images.githubusercontent.com/111561203/224660464-18818970-a737-4ac6-8147-302cfa452016.png)
-
+![tabel room booked](https://user-images.githubusercontent.com/111561203/227854094-689e5309-6429-46a2-a7a8-d3a9f98b947e.PNG)
 
 
 ## :exclamation: Requirements
