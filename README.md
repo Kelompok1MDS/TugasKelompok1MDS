@@ -1,7 +1,7 @@
 
 <div align="center">
 
-![image](https://user-images.githubusercontent.com/111561203/223317186-0630da8c-c88b-4531-bd94-c56953138279.png)
+![image](https://user-images.githubusercontent.com/111561203/228008165-c06b14a4-adac-416b-8482-6a272e83e405.png)
 
 # Sistem Informasi Pemesanan Tiket Hotel
 
@@ -76,6 +76,8 @@ Pada data kamar ini akan ditampilkan informasi tentang kamar di masing-masing ho
 Pada riwayat pemesanan ini akan ditampilkan informasi tentang riwayat reservasi oleh guest berdasarkan masing-masing hotel.
 
 ![riwayat pemesanan 1](https://user-images.githubusercontent.com/111561203/227990168-3c8e0227-69c5-4c6b-9255-54d2d576f81c.png)
+
+![riwayat pemesanan](https://user-images.githubusercontent.com/111561203/228008551-4f5e16ce-1d63-4d72-ba82-5ec60be7539e.PNG)
 
 
 ## :dvd: Demo
