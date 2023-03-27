@@ -392,7 +392,8 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 │   ├── server.R
 │   └── ui.R
 ├── data 
-│   ├── xlsx
+│   ├── insert sql
+|       └── word insert sql 
 │   └── sql
 |       └── db.sql
 ├── src           # Project source code
