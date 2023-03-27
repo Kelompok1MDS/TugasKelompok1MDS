@@ -47,37 +47,42 @@ Pada dashboard ini menampilkan halaman tim pengembang, grafik pengunjung, dan gr
 
 #### a. Tim Pengembang
 
-![tim pengembang](https://user-images.githubusercontent.com/111561203/227986377-1306d014-645f-4ad1-b6a7-6b0d4b70f9e4.PNG)
+![tim pengembang](https://user-images.githubusercontent.com/111561203/228075253-777425f1-f6fc-48c9-be8c-de867fa2d511.PNG)
 
 #### b. Grafik Pengunjung
 
-![grafik pengunjung](https://user-images.githubusercontent.com/111561203/227986924-b72f8242-e994-446e-a728-0a23f9810ad4.PNG)
+![grafik pengunjung](https://user-images.githubusercontent.com/111561203/228075319-6d9353f0-5a5d-424f-b490-0ca067bf8849.PNG)
 
 #### c. Grafik Tagihan
 
-![grafik tagihan](https://user-images.githubusercontent.com/111561203/227987064-d79651fc-d869-4802-a064-bc248428d2c3.PNG)
+![grafik tagihan](https://user-images.githubusercontent.com/111561203/228075344-db9591b5-20f1-4055-831f-840456e6a5da.PNG)
 
 ### 2. Data Hotel
 Pada data hotel ini menampilkan informasi tentang hotel yang tersedia pada database.
 
-![data hotel](https://user-images.githubusercontent.com/111561203/227987208-36b60fc4-147f-4cc2-930f-5ff1067c4d99.PNG)
+![data hotel](https://user-images.githubusercontent.com/111561203/228075390-b7574d0d-238a-445c-80b6-cd6475bbb20a.PNG)
 
 ### 3. Data Guest
 Pada data guest ini akan ditampilkan informasi tentang guest yang melakukan reservasi hotel.
 
-![data guest](https://user-images.githubusercontent.com/111561203/227987354-3f56e07a-3407-4a35-8c33-6dbab86e1bc5.PNG)
+![data guest](https://user-images.githubusercontent.com/111561203/228075451-4eed4769-14c2-4836-89d0-4bc4c897b6a0.PNG)
 
-### 4. Data Kamar
+### 4. Data Reservation Agent
+Pada data reservation agent ini akan ditampilkan informasi tentang agen yang melakukan reservasi hotel.
+
+![data reservation agent](https://user-images.githubusercontent.com/111561203/228075830-369d570d-925d-4cfe-bedd-4d2e106f4a64.PNG)
+
+### 5. Data Kamar
 Pada data kamar ini akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
 
-![data kamar](https://user-images.githubusercontent.com/111561203/227987528-017c876c-4a74-481a-8b64-4990b5934167.PNG)
+![data kamar](https://user-images.githubusercontent.com/111561203/228075502-f7286da6-966d-44cb-8fd9-ce682edd7028.PNG)
 
-### 5. Riwayat Pemesanan
+### 6. Riwayat Pemesanan
 Pada riwayat pemesanan ini akan ditampilkan informasi tentang riwayat reservasi oleh guest berdasarkan masing-masing hotel.
 
-![riwayat pemesanan 1](https://user-images.githubusercontent.com/111561203/227990168-3c8e0227-69c5-4c6b-9255-54d2d576f81c.png)
+![riwayat pesanan 1](https://user-images.githubusercontent.com/111561203/228075679-fd941bc0-b179-4a8f-8597-18382b3be87f.png)
 
-![riwayat pemesanan](https://user-images.githubusercontent.com/111561203/228008551-4f5e16ce-1d63-4d72-ba82-5ec60be7539e.PNG)
+![riwayat pesanan](https://user-images.githubusercontent.com/111561203/228075623-1a0b57c0-1872-412f-b764-71fc66186af7.PNG)
 
 
 ## :dvd: Demo
@@ -127,7 +132,7 @@ library(plotly)
 
 ## :rotating_light: ERD
 
-![ERD](https://user-images.githubusercontent.com/111561203/227851269-f3602ec9-10df-499e-963b-332ab7fd8574.jpeg)
+![WhatsApp Image 2023-03-28 at 04 40 27](https://user-images.githubusercontent.com/111561203/228075114-85224ec4-3773-40d1-94ec-e327ab38e3b4.jpeg)
 
 ## :heavy_check_mark: Deskripsi Data
 
