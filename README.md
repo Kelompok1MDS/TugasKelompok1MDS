@@ -382,7 +382,7 @@ ALTER TABLE IF EXISTS public.room_booked
 │   ├── insert sql query
 |       └── word insert sql query
 |   ├── xlsx
-|       └── excel data sql
+|       └── excel tabel data
 │   └── sql
 |       └── db.sql
 ├── src           # Project source code
