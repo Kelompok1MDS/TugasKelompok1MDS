@@ -406,8 +406,25 @@ ALTER TABLE IF EXISTS public."RoomBooked"
 ## :smiley_cat: Tim Pengembang
 
 - [Kelompok 1 MDS](https://github.com/Kelompok1MDS)
+
 - Data Manager : [Irsyifa Mayzela Afnan](https://github.com/irsyifa) G1501222062
+
+![image](https://user-images.githubusercontent.com/111561203/227850526-85963b40-de8b-442e-b180-11f294bdefff.png)
+
+
 - Shiny Developer : [Teguh Prasetyo](https://github.com/teguhprasetyo08) G1501220131
+
+![image](https://user-images.githubusercontent.com/111561203/227850496-12801984-80b0-4940-8f54-704a9eb74d2c.png)
+
+
 - Shiny Developer : [Dini Ramadhani](https://github.com/diniramadhani) G1501220131
+
+![image](https://user-images.githubusercontent.com/111561203/227850560-4046c2ae-76ea-49e9-847d-7ce7a3113407.png)
+
+
 - Technical Writer : [Adeline Vinda Septiani](https://github.com/Adelievs000) G1501221006
+
+![image](https://user-images.githubusercontent.com/111561203/227850602-2c7eb4c0-0eea-4fe5-80e3-c9793cc7d3b4.png)
+
+
 - Full-Stack Developer: [Alfa Nugraha](https://github.com/alfanugraha) G1501211013
