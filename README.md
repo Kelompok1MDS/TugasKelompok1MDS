@@ -130,20 +130,20 @@ CREATE DATABASE Reservasi_Hotel
     IS_TEMPLATE = False;
 ```
 
-### 1. Tabel *Guest*
+### 1. Tabel *guest*
 
-Tabel *Guest* digunakan untuk menyimpan data tamu.
+Tabel *guest* digunakan untuk menyimpan data tamu.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| GuestID                 | character varying(10) | Id Guest                      |
-| FirstName               | character varying(15) | First Name                    |
-| LastName                | character varying(15) | Last Name                     |
-| Gender                  | char(9)               | Jenis kelamin                 |
-| PhoneNumber             | character varying(13) | Nomor Telepon                 |
-| Email                   | character varying(50) | Email                         |
-| Address                 | character varying(50) | Alamat                        |
+| guest_id                | character varying(10) | Id Guest                      |
+| firstname               | character varying(15) | First Name                    |
+| lastname                | character varying(15) | Last Name                     |
+| gender                  | char(9)               | Jenis kelamin                 |
+| phonenumber             | character varying(13) | Nomor Telepon                 |
+| email                   | character varying(50) | Email                         |
+| address                 | character varying(50) | Alamat                        |
 
 
 ### Create Table Guest
@@ -165,20 +165,20 @@ ALTER TABLE IF EXISTS public."Guest"
     OWNER to postgres;
 ```
 
-### 2. Tabel *Reservation Agent*
+### 2. Tabel *reservation_agent*
 
 Tabel *Reservation Agent* digunakan untuk menyimpan data agen yang melakukan pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| ReservationAgentID      | character varying(10) | Id Reservation Agent          |
-| FirstName               | character varying(15) | First Name                    |
-| LastName                | character varying(15) | Last Name                     |
-| Gender                  | char(9)               | Jenis kelamin                 |
-| PhoneNumber             | character varying(13) | Nomor Telepon                 |
-| Email                   | character varying(50) | Email                         |
-| Address                 | character varying(50) | Alamat                        |
+| reservationagent_id     | character varying(10) | Id Reservation Agent          |
+| firstname               | character varying(15) | First Name                    |
+| lastname                | character varying(15) | Last Name                     |
+| gender                  | char(9)               | Jenis kelamin                 |
+| phonenumber             | character varying(13) | Nomor Telepon                 |
+| email                   | character varying(50) | Email                         |
+| address                 | character varying(50) | Alamat                        |
 
 
 ### Create Table Reservation Agent
@@ -200,17 +200,17 @@ ALTER TABLE IF EXISTS public."ReservationAgent"
     OWNER to postgres;
 ```
 
-### 3. Tabel *Hotels*
+### 3. Tabel *hotels*
 
-Tabel *Hotels* digunakan untuk menyimpan data hotel.
+Tabel *hotels* digunakan untuk menyimpan data hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| HotelsID                | character varying(10) | Id Hotel                      |
-| Name                    | character varying(100)| Nama Hotel                    |
-| Address                 | character varying(50) | Alamat                        |
-| Price                   | integer               | Harga                         |
+| hotels_id                | character varying(10) | Id Hotel                      |
+| name                    | character varying(100)| Nama Hotel                    |
+| address                 | character varying(50) | Alamat                        |
+| price                   | integer               | Harga                         |
 
 
 ### Create Table Hotels
@@ -229,19 +229,19 @@ ALTER TABLE IF EXISTS public."Hotels"
     OWNER to postgres;
 ```
 
-### 4. Tabel *Rooms*
+### 4. Tabel *rooms*
 
-Tabel *Rooms* digunakan untuk untuk data penjualan kamar.
+Tabel *rooms* digunakan untuk untuk data penjualan kamar.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| RoomsID                 | character varying(10) | Id Rooms                      |
-| HotelsID                | character varying(10) | Id Hotel                      |
-| Type                    | character varying(25) | Tipe Kamar                    |
-| Number                  | integer               | Nomor Kamar                   |
-| Floor                   | character varying(25) | Lantai                        |
-| Status                  | character varying(25) | Status Kamar                  |
+| room_id                 | character varying(10) | Id Rooms                      |
+| hotel_id                | character varying(10) | Id Hotel                      |
+| type                    | character varying(25) | Tipe Kamar                    |
+| number                  | integer               | Nomor Kamar                   |
+| floor                   | character varying(25) | Lantai                        |
+| status                  | character varying(25) | Status Kamar                  |
 
 ### Create Table Rooms
 
@@ -266,16 +266,16 @@ ALTER TABLE IF EXISTS public."Rooms"
     OWNER to postgres;
 ```
 
-### 5. Tabel *BookingStatus*
+### 5. Tabel *booking_status*
 
 Tabel *BookingStatus* digunakan untuk mengolah status pemesanan hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| BookingStatusID         | character varying(10) | Id BookingStatus              |
-| Description             | character varying(100)| Deskripsi                     |
-| Status                  | character varying(50) | Status Booking                |
+| bookingstatus_id        | character varying(10) | Id BookingStatus              |
+| description             | character varying(100)| Deskripsi                     |
+| status                  | character varying(50) | Status Booking                |
 
 
 ### Create Table BookingStatus
@@ -293,21 +293,21 @@ ALTER TABLE IF EXISTS public."BookingStatus"
     OWNER to postgres;
 ```
 
-### 6. Tabel *Bookings*
+### 6. Tabel *bookings*
 
 Tabel *Bookings* digunakan untuk mengolah data pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| BookingsID              | character varying(10) | Id Bookings                   |
-| GuestID                 | character varying(10) | Id Guest                      |
-| HotelsID                | character varying(10) | Id Hotel                      |
-| StartDate               | date                  | Tanggal Mulai Booking         |
-| EndDate                 | date                  | Tanggal Akhir Booking         |
-| RoomCount               | integer               | Jumlah Kamar                  |
-| BookingStatusID         | character varying(50) | Id BookingStatus              |
-| ReservationAgentID      | character varying(10) | Id Reservation Agent          |
+| bookings_id             | character varying(10) | Id Bookings                   |
+| guest_id                | character varying(10) | Id Guest                      |
+| hotel_id                | character varying(10) | Id Hotel                      |
+| startdate               | date                  | Tanggal Mulai Booking         |
+| enddate                 | date                  | Tanggal Akhir Booking         |
+| roomcount               | integer               | Jumlah Kamar                  |
+| bookingstatus_id        | character varying(50) | Id BookingStatus              |
+| reservationagent_id     | character varying(10) | Id Reservation Agent          |
 
 ### Create Table Bookings
 
@@ -346,17 +346,17 @@ CREATE TABLE public."Bookings"
 );
 ```
 
-### 7. Tabel *RoomBooked*
+### 7. Tabel *room_booked*
 
-Tabel *RoomBooked* digunakan untuk untuk mengolah kamar yang akan dipesan.
+Tabel *room_booked* digunakan untuk untuk mengolah kamar yang akan dipesan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
 |:------------------------|:----------------------|:------------------------------|
-| RoomBookedID            | character varying(10) | Id RoomBooked                 |
-| RoomsID                 | character varying(10) | Id Rooms                      |
-| BookingsID              | character varying(10) | Id Bookings                   |
-| Rate                    | character varying(10) | Rating                        |
+| roombooked_id           | character varying(10) | Id RoomBooked                 |
+| room_id                 | character varying(10) | Id Rooms                      |
+| booking_id             | character varying(10) | Id Bookings                   |
+| rate                    | character varying(10) | Rating                        |
 
 ### Create Table RoomBooked
 
