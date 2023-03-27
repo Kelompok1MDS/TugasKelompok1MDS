@@ -403,13 +403,10 @@ ALTER TABLE IF EXISTS public.room_booked
 │   ├── server.R
 │   └── ui.R
 ├── data 
-│   ├── insert sql query
-|       └── word insert sql query
 |   ├── xlsx
 |       └── excel tabel data
 │   └── sql
 |       └── db.sql
-├── src           # Project source code
 ├── doc           # Doc for the project
 ├── .gitignore
 ├── LICENSE
