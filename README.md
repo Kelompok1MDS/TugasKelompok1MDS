@@ -108,12 +108,12 @@ library(DT)
 
 ## :floppy_disk: Skema Database
 
-![Skema](https://user-images.githubusercontent.com/111561203/223318819-697312ff-99ff-4d7e-822e-34860066556e.jpeg)
+![Skema](https://user-images.githubusercontent.com/111561203/227851188-a3546cf5-5234-4cc8-ba27-cccc5a6b24a0.jpeg)
 
 
 ## :rotating_light: ERD
 
-![ERD](https://user-images.githubusercontent.com/111561203/223318979-f7cdd098-b937-414d-9dca-c28183c70900.jpeg)
+![ERD](https://user-images.githubusercontent.com/111561203/227851269-f3602ec9-10df-499e-963b-332ab7fd8574.jpeg)
 
 ## :heavy_check_mark: Deskripsi Data
 
@@ -122,7 +122,7 @@ Database untuk reservasi hotel ini didapatkan dengan menggunakan **teknik web sc
 ### Create Database Reservasi_Hotel
 
 ``` sql
-CREATE DATABASE Reservasi_Hotel
+CREATE DATABASE reservasi_hotel
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -146,28 +146,28 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | address                 | character varying(50) | Alamat                        |
 
 
-### Create Table Guest
+### Create Table guest
 
 ``` sql
-CREATE TABLE public."Guest"
+CREATE TABLE public.guest
 (
-    "GuestID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("GuestID")
+    guest_id character varying(10) NOT NULL,
+    firstname character varying(15) NOT NULL,
+    lastname character varying(15),
+    address character varying(50) NOT NULL,
+    gender character(9) NOT NULL,
+    phonenumber character varying(13) NOT NULL,
+    email character varying(50) NOT NULL,
+    PRIMARY KEY (guest_id)
 );
 
-ALTER TABLE IF EXISTS public."Guest"
+ALTER TABLE IF EXISTS public.guest
     OWNER to postgres;
 ```
 
 ### 2. Tabel *reservation_agent*
 
-Tabel *Reservation Agent* digunakan untuk menyimpan data agen yang melakukan pemesanan.
+Tabel *reservation_agent* digunakan untuk menyimpan data agen yang melakukan pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -181,22 +181,22 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | address                 | character varying(50) | Alamat                        |
 
 
-### Create Table Reservation Agent
+### Create Table reservation_agent
 
 ``` sql
-CREATE TABLE public."ReservationAgent"
+CREATE TABLE public.reservation_agent
 (
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "FirstName" character varying(15) NOT NULL,
-    "LastName" character varying(15),
-    "Address" character varying(50) NOT NULL,
-    "Gender" character(9) NOT NULL,
-    "PhoneNumber" character varying(13) NOT NULL,
-    "Email" character varying(50) NOT NULL,
-    PRIMARY KEY ("ReservationAgentID")
+    reservationagent_id character varying(10) NOT NULL,
+    firstname character varying(15) NOT NULL,
+    lastname character varying(15),
+    address character varying(50) NOT NULL,
+    gender character(9) NOT NULL,
+    phonenumber character varying(13) NOT NULL,
+    email character varying(50) NOT NULL,
+    PRIMARY KEY (reservationagent_id)
 );
 
-ALTER TABLE IF EXISTS public."ReservationAgent"
+ALTER TABLE IF EXISTS public.reservation_agent
     OWNER to postgres;
 ```
 
@@ -213,19 +213,19 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | price                   | integer               | Harga                         |
 
 
-### Create Table Hotels
+### Create Table hotels
 
 ``` sql
-CREATE TABLE public."Hotels"
+CREATE TABLE public.hotels
 (
-    "HotelID" character varying(10) NOT NULL,
-    "HotelName" character varying(100) NOT NULL,
-    "Address" character varying(50) NOT NULL,
-    "Price" integer NOT NULL,
-    PRIMARY KEY ("HotelID")
+    hotel_id character varying(10) NOT NULL,
+    hotelname character varying(100) NOT NULL,
+    address character varying(50) NOT NULL,
+    price integer NOT NULL,
+    PRIMARY KEY (hotel_id)
 );
 
-ALTER TABLE IF EXISTS public."Hotels"
+ALTER TABLE IF EXISTS public.hotels
     OWNER to postgres;
 ```
 
@@ -243,32 +243,29 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | floor                   | character varying(25) | Lantai                        |
 | status                  | character varying(25) | Status Kamar                  |
 
-### Create Table Rooms
+### Create Table rooms
 
 ``` sql
-CREATE TABLE public."Rooms"
+CREATE TABLE public.rooms
 (
-    "RoomID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "Type" character varying(50) NOT NULL,
-    "Number" integer NOT NULL,
-    "Floor" character varying(10) NOT NULL,
-    "Status" character varying(10),
-    PRIMARY KEY ("RoomID"),
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
+    room_id character varying(10) NOT NULL,
+    hotel_id character varying(10) NOT NULL,
+    type character varying(50) NOT NULL,
+    number integer NOT NULL,
+    floor character varying(10) NOT NULL,
+    status character varying(10),
+    PRIMARY KEY (room_id),
+    CONSTRAINT hotel_id_fkey FOREIGN KEY (hotel_id)
+        REFERENCES public.hotels (hotel_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
 );
-
-ALTER TABLE IF EXISTS public."Rooms"
-    OWNER to postgres;
 ```
 
 ### 5. Tabel *booking_status*
 
-Tabel *BookingStatus* digunakan untuk mengolah status pemesanan hotel.
+Tabel *booking_status* digunakan untuk mengolah status pemesanan hotel.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -278,24 +275,24 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | status                  | character varying(50) | Status Booking                |
 
 
-### Create Table BookingStatus
+### Create Table booking_status
 
 ``` sql
-CREATE TABLE public."BookingStatus"
+CREATE TABLE public.booking_status
 (
-    "BookingStatusID" character varying(10) NOT NULL,
-    "Status" character varying(50) NOT NULL,
-    "Description" character varying(100) NOT NULL,
-    PRIMARY KEY ("BookingStatusID")
+    bookingstatus_id character varying(10) NOT NULL,
+    status character varying(50) NOT NULL,
+    description character varying(100) NOT NULL,
+    PRIMARY KEY (bookingstatus_id)
 );
 
-ALTER TABLE IF EXISTS public."BookingStatus"
+ALTER TABLE IF EXISTS public.booking_status
     OWNER to postgres;
 ```
 
 ### 6. Tabel *bookings*
 
-Tabel *Bookings* digunakan untuk mengolah data pemesanan.
+Tabel *bookings* digunakan untuk mengolah data pemesanan.
 Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 
 | Attribute               | Type                  | Description                   |
@@ -309,37 +306,37 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | bookingstatus_id        | character varying(50) | Id BookingStatus              |
 | reservationagent_id     | character varying(10) | Id Reservation Agent          |
 
-### Create Table Bookings
+### Create Table bookings
 
 ``` sql
-CREATE TABLE public."Bookings"
+CREATE TABLE public.bookings
 (
-    "BookingID" character varying(10) NOT NULL,
-    "ReservationAgentID" character varying(10) NOT NULL,
-    "GuestID" character varying(10) NOT NULL,
-    "HotelID" character varying(10) NOT NULL,
-    "BookingStatusID" character varying(10) NOT NULL,
-    "StartDate" date NOT NULL,
-    "EndDate" date NOT NULL,
-    "RoomCount" integer NOT NULL,
-    PRIMARY KEY ("BookingID"),
-    CONSTRAINT "ReservationAgentID_fkey" FOREIGN KEY ("ReservationAgentID")
-        REFERENCES public."ReservationAgent" ("ReservationAgentID") MATCH SIMPLE
+    booking_id character varying(10) NOT NULL,
+    reservationagent_id character varying(10) NOT NULL,
+    guest_id character varying(10) NOT NULL,
+    hotel_id character varying(10) NOT NULL,
+    bookingstatus_id character varying(10) NOT NULL,
+    startdate date NOT NULL,
+    enddate date NOT NULL,
+    roomcount integer NOT NULL,
+    PRIMARY KEY (booking_id),
+    CONSTRAINT reservationagent_id_fkey FOREIGN KEY (reservationagent_id)
+        REFERENCES public.reservation_agent (reservationagent_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "GuestID_fkey" FOREIGN KEY ("GuestID")
-        REFERENCES public."Guest" ("GuestID") MATCH SIMPLE
+    CONSTRAINT guest_id_fkey FOREIGN KEY (guest_id)
+        REFERENCES public.guest (guest_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "HotelID_fkey" FOREIGN KEY ("HotelID")
-        REFERENCES public."Hotels" ("HotelID") MATCH SIMPLE
+    CONSTRAINT hotel_id_fkey FOREIGN KEY (hotel_id)
+        REFERENCES public.hotels (hotel_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-     CONSTRAINT "BookingStatusID_fkey" FOREIGN KEY ("BookingStatusID")
-        REFERENCES public."BookingStatus" ("BookingStatusID") MATCH SIMPLE
+     CONSTRAINT bookingstatus_id_fkey FOREIGN KEY (bookingstatus_id)
+        REFERENCES public.booking_status (bookingstatus_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -358,29 +355,29 @@ Adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
 | booking_id             | character varying(10) | Id Bookings                   |
 | rate                    | character varying(10) | Rating                        |
 
-### Create Table RoomBooked
+### Create Table room_booked
 
 ``` sql
-CREATE TABLE public."RoomBooked"
+CREATE TABLE public.room_booked
 (
-    "RoomBookedID" character varying(10) NOT NULL,
-    "RoomID" character varying(10) NOT NULL,
-    "BookingID" character varying(10) NOT NULL,
-    "Rate" character varying(10) NOT NULL,
-    PRIMARY KEY ("RoomBookedID"),
-    CONSTRAINT "RoomID" FOREIGN KEY ("RoomID")
-        REFERENCES public."Rooms" ("RoomID") MATCH SIMPLE
+    roombooked_id character varying(10) NOT NULL,
+    room_id character varying(10) NOT NULL,
+    booking_id character varying(10) NOT NULL,
+    rate character varying(10) NOT NULL,
+    PRIMARY KEY (roombooked_id),
+    CONSTRAINT room_id FOREIGN KEY (room_id)
+        REFERENCES public.rooms (room_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID,
-    CONSTRAINT "BookingID" FOREIGN KEY ("BookingID")
-        REFERENCES public."Bookings" ("BookingID") MATCH SIMPLE
+    CONSTRAINT booking_id FOREIGN KEY (booking_id)
+        REFERENCES public.bookings (booking_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
 );
 
-ALTER TABLE IF EXISTS public."RoomBooked"
+ALTER TABLE IF EXISTS public.room_booked
     OWNER to postgres;
 ```
 
