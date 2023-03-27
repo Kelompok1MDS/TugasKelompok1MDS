@@ -65,9 +65,15 @@ Pada data guest ini akan ditampilkan informasi tentang guest yang melakukan rese
 ![data guest](https://user-images.githubusercontent.com/111561203/227987354-3f56e07a-3407-4a35-8c33-6dbab86e1bc5.PNG)
 
 ### 4. Data Kamar
-Pada data kamar ini akan akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
+Pada data kamar ini akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
 
 ![data kamar](https://user-images.githubusercontent.com/111561203/227987528-017c876c-4a74-481a-8b64-4990b5934167.PNG)
+
+### 5. Riwayat Pemesanan
+Pada riwayat pemesanan ini akan ditampilkan informasi tentang riwayat reservasi oleh guest berdasarkan masing-masing hotel.
+
+![riwayat pemesanan 1](https://user-images.githubusercontent.com/111561203/227990168-3c8e0227-69c5-4c6b-9255-54d2d576f81c.png)
+
 
 ## :dvd: Demo
 
