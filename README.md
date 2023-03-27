@@ -39,29 +39,39 @@ Shiny adalah paket R yang membuatnya mudah untuk membangun aplikasi web interakt
 
 Pada sistem manajemen database reservasi hotel ini, dibuat dashboard untuk untuk merangkum tampilan /informasi penting dalam satu layar tentang database reservasi hotel.
 
-### 1. Data Hotel
+### 1. Dashboard
+Pada dashboard ini menampilkan halaman tim pengembang, grafik pengunjung, dan grafik tagihan.
+
+#### a. Tim Pengembang
+
+![tim pengembang](https://user-images.githubusercontent.com/111561203/227986377-1306d014-645f-4ad1-b6a7-6b0d4b70f9e4.PNG)
+
+#### b. Grafik Pengunjung
+
+![grafik pengunjung](https://user-images.githubusercontent.com/111561203/227986924-b72f8242-e994-446e-a728-0a23f9810ad4.PNG)
+
+#### c. Grafik Tagihan
+
+![grafik tagihan](https://user-images.githubusercontent.com/111561203/227987064-d79651fc-d869-4802-a064-bc248428d2c3.PNG)
+
+### 2. Data Hotel
 Pada data hotel ini menampilkan informasi tentang hotel yang tersedia pada database.
 
-![Data Hotel](https://user-images.githubusercontent.com/111561203/224643295-203274c1-ebc2-402a-82c3-2f75745dd621.png)
+![data hotel](https://user-images.githubusercontent.com/111561203/227987208-36b60fc4-147f-4cc2-930f-5ff1067c4d99.PNG)
 
-### 2. Data Guest
+### 3. Data Guest
 Pada data guest ini akan ditampilkan informasi tentang guest yang melakukan reservasi hotel.
 
-![Data Guest](https://user-images.githubusercontent.com/111561203/224643673-e5bba5af-152e-4c93-970c-594ac4bc1839.png)
-
-### 3. Data Reservation Agent
-Pada data reservation agent ini akan ditampilkan informasi tentang agen yang melakukan reservasi hotel.
-
-![Data Reservation Agent](https://user-images.githubusercontent.com/111561203/224643777-255818af-58c4-4288-ab34-e433a2831f31.png)
+![data guest](https://user-images.githubusercontent.com/111561203/227987354-3f56e07a-3407-4a35-8c33-6dbab86e1bc5.PNG)
 
 ### 4. Data Kamar
 Pada data kamar ini akan akan ditampilkan informasi tentang kamar di masing-masing hotel yang tersedia pada database.
 
-![Data Kamar](https://user-images.githubusercontent.com/111561203/224643946-b6a66a59-dee9-404c-a744-29f1c296a597.png)
+![data kamar](https://user-images.githubusercontent.com/111561203/227987528-017c876c-4a74-481a-8b64-4990b5934167.PNG)
 
 ## :dvd: Demo
 
-https://m70mrd-teguh-prasetyo.shinyapps.io/TugasKelompok1MDS_v2/?_ga=2.219344665.1065288786.1678596004-1380562267.1678596004
+https://m70mrd-teguh-prasetyo.shinyapps.io/HotelReservationIS/
 
 ## :blue_book: Dokumentasi 
 
@@ -90,11 +100,14 @@ library(DBI)
 
 library(DT)
 
+library(plotly)
+
 - RDBMS yang digunakan adalah PostgreSQL
 
 - Front End menggunakan RShiny UI
 
 - Back End menggunakan RShiny Server
+
 
 ## :floppy_disk: Skema Database
 
